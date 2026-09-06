@@ -14,26 +14,26 @@
     "label": "KEY HIGHLIGHTS",
     "items": [
       {
-        "num": "$17.2M",
-        "label": "Annual GMV generated"
+        "num": "1,720만 달러",
+        "label": "연간 창출 GMV"
       },
       {
-        "num": "900+",
-        "label": "Campaigns operated"
+        "num": "900회 이상",
+        "label": "캠페인 운영"
       },
       {
-        "num": "3K → $200K",
-        "label": "Followers to GMV per campaign"
+        "num": "구독자 3천 명 → 캠페인당 20만 달러",
+        "label": "적은 팔로워로 GMV 최대화"
       }
     ]
   },
   "when": {
     "label": "WHEN YOU NEED ME",
     "items": [
-      "You have data, but no clear answer for why things turned out the way they did.",
-      "The more stakeholders involved, the slower everything gets — and something always gets lost.",
-      "You move fast, but when things break, there's no one to own the fix end-to-end.",
-      "A campaign underperformed and you're not sure why — or how to prevent it next time."
+      "데이터는 있는데, 왜 이런 결과가 나왔는지 명확한 답을 찾을 수 없을 때",
+      "이해관계자가 많아 일의 진행이 느려지고 길을 잃으려 할 때",
+      "어떠한 문제를 끝까지 책임지고 해결할 사람이 필요할 때",
+      "개선이 필요한 문제의 원인을 찾고 대안을 찾고자 할 때"
     ]
   },
   "collaborated": {
@@ -47,98 +47,98 @@
       {
         "slug": "creator-discovery",
         "tag": "01 · DATA ANALYSIS",
-        "title": "Finding a $200K creator in a 3,000-follower channel",
-        "desc": "Platform sales data revealed Tesla accessories were outperforming — leading to a creator discovery that broke every assumption about follower count.",
+        "title": "구독자 3,000명 채널에서 20만 달러 GMV를 뽑아낸 방법",
+        "desc": "팔로워 수가 아닌 구매 전환 데이터로 채널을 발굴한 사례.",
         "resultNum": "$200K",
-        "resultLabel": "avg GMV · 3K subscribers",
-        "context": "AliExpress Korea's influencer group-buying operates on a CPS (Cost Per Sale) model — commissions are paid based on sales performance, with no upfront fees. Actual sales conversion, not channel size, is the core criteria for partner selection.",
-        "problem": "Subscriber count indicates reach, but does not correlate directly with purchase conversion. Follower-based channel selection showed low predictive accuracy, and cases of small channels outperforming large ones were repeatedly observed. A quantifiable framework for evaluating sales potential in advance was needed.",
-        "role": "Contribution: ~95%. End-to-end ownership — channel discovery, data tracking, outreach, and contract structure design.",
+        "resultLabel": "평균 GMV · 구독자 3천 명",
+        "context": "AliExpress Korea 인플루언서 공동구매는 CPS(판매 수수료) 기반으로 운영된다. 섭외비 없이 판매 성과에 연동해 수수료를 지급하는 구조로, 채널 규모보다 실질 판매 전환력이 파트너 선정의 핵심 기준이다.",
+        "problem": "구독자 수는 도달 범위를 나타내지만 구매 전환과는 직결되지 않는다. 팔로워 수 기준의 채널 선정은 성과 예측력이 낮았고, 소규모 채널이 대형 채널을 상회하는 사례가 반복적으로 관찰됐다. 판매력을 사전에 정량화할 수 있는 기준이 필요했다.",
+        "role": "기여도 약 95%. 채널 발굴, 데이터 추적, 섭외, 계약 구조 설계까지 전 과정 단독 담당.",
         "approach": {
-          "intro": "Shifted the channel selection criteria from follower count to the density of purchase-intent audiences. Three indicators were used to evaluate channels.",
+          "intro": "채널 선정 기준을 팔로워 수에서 구매 의도 집단의 밀도로 전환했다. 세 가지 지표를 기준으로 채널을 평가했다.",
           "steps": [
             {
-              "title": "Inbound Data Tracking",
-              "desc": "Identified YouTube channels that had reviewed AliExpress-listed products, then tracked actual platform inflow and purchase conversion data through links in video descriptions."
+              "title": "유입 데이터 추적",
+              "desc": "유튜브 내 AliExpress 관련 리뷰 채널을 특정하고, 영상 설명란의 링크를 통한 실제 플랫폼 유입량과 구매 전환 데이터를 추적했다."
             },
             {
-              "title": "Community Engagement Pattern",
-              "desc": "Channels that communicated directly with followers through separate channels (e.g., open KakaoTalk chats) tended to attract prospective buyers rather than passive content consumers."
+              "title": "커뮤니티 운영 방식",
+              "desc": "오픈카톡방 등 별도 채널을 통해 팔로워와 직접 소통하는 채널은 콘텐츠 소비자가 아닌 예비 구매자 집단이 형성되는 경향이 있었다."
             },
             {
-              "title": "Content Purpose",
-              "desc": "Channels focused on delivering information and deals — rather than entertainment — showed higher viewer-to-buyer conversion rates."
+              "title": "콘텐츠 목적",
+              "desc": "엔터테인먼트보다 정보·혜택 제공을 목적으로 하는 채널일수록 시청자의 구매 전환율이 높았다."
             }
           ],
-          "outro": "Applying these criteria, a Tesla accessories channel with approximately 3,000 subscribers was identified. Meaningful sales contribution was pre-confirmed through link tracking data, and the community engagement pattern matched the target profile."
+          "outro": "이 기준을 적용해 구독자 약 3,000명의 테슬라 용품 전문 채널을 발굴했다. 링크 추적 데이터에서 유의미한 판매 기여가 사전 확인됐고, 커뮤니티 운영 패턴도 기준에 부합했다."
         },
-        "result": "Average GMV per campaign: $200K+. Equivalent to the output typically seen from channels with 100K+ subscribers. The same discovery framework applied to a running shoe channel (also several thousand subscribers) produced consistent results of $200K+ per campaign.",
-        "lesson": "Follower count is an indicator of reach, not conversion. Purchase behavior is determined by the type of audience a channel attracts — not its size. Viewers who come for information and deals behave differently from those who come for content. This framework was applied to subsequent category expansion (automotive accessories) and produced repeatable results.",
-        "improvement": "The discovery criteria remained personal know-how rather than a formalized scoring system. While insights were shared in team review sessions, a standardized evaluation framework was never documented — which limited scalability across the team."
+        "result": "캠페인 평균 GMV 20만 달러 이상 달성. 통상 구독자 10만 명 이상 채널에서 나오는 수준의 매출. 동일한 발굴 기준을 적용한 러닝화 전문 채널에서도 캠페인당 20만 달러 이상의 성과를 반복 확인했다.",
+        "lesson": "팔로워 규모는 도달 범위의 지표일 뿐, 판매 전환력과는 별개의 변수다. 구매 전환은 채널이 어떤 목적의 시청자를 모으는가에 의해 결정된다. 이 기준은 이후 차량용품 카테고리 채널 발굴에도 동일하게 적용됐으며 성과를 재현했다.",
+        "improvement": "발굴 기준은 리뷰 회의를 통해 팀 내 공유됐으나, 재현 가능한 정량 평가 지표로 체계화되지는 못했다. 표준화된 스코어링 시스템으로 발전시켰다면 팀 전체의 채널 선정 정확도를 높일 수 있었을 것이다."
       },
       {
         "slug": "itsub-crisis",
         "tag": "02 · CRISIS MANAGEMENT",
-        "title": "18 hours to resolve a full-order cancellation",
-        "desc": "A human error triggered a total order cancellation on a 2.8M-subscriber creator campaign. Resolved in 18 hours. Industry standard: 7–14 days.",
+        "title": "18시간 안에 끝낸 위기 — 잇섭 전량 취소 사고",
+        "desc": "휴먼에러로 발생한 전량 취소 사고. 업계 표준 7~14일 프로세스를 18시간에 마무리했다.",
         "resultNum": "18h",
-        "resultLabel": "resolution · vs 7–14 day standard",
-        "context": "In June 2025, a co-branded group-buying campaign was planned and executed involving Intel, Itsub, and AliExpress. Itsub is a tech YouTuber with 2.8M+ subscribers — a high-opportunity, high-risk partnership where any negative experience for followers could directly translate into brand damage.",
-        "problem": "At midnight on the final day of the one-week campaign, all orders were converted to a full cancellation. The cause was a human error: the 'cancel all orders if sales target is not met' option had been left active during event setup. As the cancellation triggered, viewer complaints began flooding the comments section of the creator's channel.",
-        "role": "Contribution: ~90%. Led the full response — incident recognition, internal reporting, solution design, stakeholder coordination, direct user communication, and drafting and approving the public notice. Final decisions were made with approval from the Korea General Manager and team lead.",
+        "resultLabel": "해결 시간 · 표준 대비 7~14일",
+        "context": "2025년 6월, 인텔·잇섭·AliExpress 3자 코브랜딩 공동구매 이벤트를 기획·운영했다. 구독자 280만 명 이상의 IT 전문 크리에이터와의 협업을 통한 사업적 기회가 명확한 만큼 팔로워 이익이 침해될 경우 브랜드 리스크로 직결되는 고위험·고기회 구조의 파트너십이었다.",
+        "problem": "일주일간의 이벤트가 종료된 자정, 전체 주문이 일괄 취소로 전환됐다. 원인은 이벤트 세팅 시 \"판매 목표 수량 미달성 시 주문 전량 취소\" 옵션이 활성화된 상태로 운영된 휴먼에러였다. 이벤트 종료와 동시에 크리에이터 채널 댓글창에 구매자 불만이 집중되기 시작했다.",
+        "role": "기여도 약 90%. 사고 인지, 보고, 해결 방향 설계, 이해관계자 조율, 유저 직접 대응, 공지문 작성 및 승인 프로세스까지 전 과정 주도. 최종 의사결정은 한국지사 대표 및 팀장 승인 하에 진행.",
         "approach": {
-          "intro": "Three tracks were executed in parallel immediately upon identifying the incident.",
+          "intro": "사고 인지 즉시 세 가지를 병렬로 진행했다.",
           "steps": [
             {
-              "title": "Internal Reporting and Decision-Making",
-              "desc": "At 1 AM, the situation was reported to the team lead, department head, and Korea GM. The creator was also informed in real time. The resolution direction converged quickly under a single principle: customer experience first — all affected buyers would be given the opportunity to repurchase at a price lower than the original."
+              "title": "내부 보고 및 의사결정",
+              "desc": "새벽 1시, 팀장·본부장·한국 대표에게 즉시 상황 보고. 크리에이터 측에도 실시간으로 상황을 공유했다. 해결 방향은 고객 경험 1순위 원칙 하에 단일 방향으로 빠르게 수렴했다 — 기존 구매가보다 낮은 가격으로 전원 재구매 기회 제공."
             },
             {
-              "title": "Emergency Budget Approval and Re-setup",
-              "desc": "The original payment discount budget had expired with the event's close. An emergency budget request was submitted, and re-setup began immediately upon approval."
+              "title": "예산 긴급 승인 및 세팅",
+              "desc": "이벤트 종료로 기존 결제 할인 예산이 만료된 상태였다. 신규 예산 승인을 긴급 요청했고, 승인 즉시 재구매 이벤트 세팅에 착수했다."
             },
             {
-              "title": "Direct User Communication",
-              "desc": "A dedicated inquiry inbox was opened for direct responses. Comments on the YouTube video were addressed one by one. Responsibility was clearly attributed to AliExpress to prevent backlash from being directed toward the creator."
+              "title": "유저 직접 대응",
+              "desc": "전용 문의 메일함을 개설해 직접 응대하고, 유튜브 댓글에 하나하나 답글을 달았다. 불만의 방향이 크리에이터 채널로 향하지 않도록 AliExpress 측의 책임 소재를 명확히 했다."
             }
           ],
-          "outro": "The public notice was drafted, refined with GPT assistance, and submitted for urgent review to Legal and PR teams — who responded despite it being the weekend. Final approval was obtained before publishing."
+          "outro": "공지문은 초안 작성 후 GPT로 1차 다듬고, 주말임에도 법무팀·PR팀 담당자에게 긴급 검토를 요청해 최종 승인을 받았다."
         },
-        "result": "From incident recognition to final public notice: under 18 hours. The same type of incident typically takes 7–14 days to resolve internally. The creator responded positively to the speed of response and the measures taken to protect followers. The campaign concluded without lasting brand damage.",
-        "lesson": "Human error is an inevitable byproduct of complex manual setup processes. Following this incident, a double-check protocol for critical option values was introduced to the event setup workflow.",
-        "improvement": "Response speed was fast, but approximately 30 minutes were spent assessing the situation alone before reporting. The more efficient sequence would have been to report immediately and conduct the assessment in parallel."
+        "result": "사고 인지부터 최종 공지까지 18시간 이내 해결. 통상 동일 유형의 사고 처리에 7~14일이 소요되는 것과 비교되는 대응 속도였다. 잇섭 측은 신속한 대응과 팔로워 보호 조치에 긍정적으로 반응했고, 이벤트는 브랜드 리스크 없이 마무리됐다.",
+        "lesson": "휴먼에러는 복잡한 수동 세팅 구조에서 필연적으로 발생한다. 이 사고 이후 이벤트 세팅 완료 시 핵심 옵션값에 대한 이중 확인 절차를 도입했다.",
+        "improvement": "사고 대응 속도는 빨랐으나, 초기 30분간 혼자 상황을 파악하느라 보고가 지연됐다. 사고 인지 즉시 보고를 선행하고 파악은 병렬로 진행하는 것이 더 효율적인 순서였다."
       },
       {
         "slug": "dashboard",
         "tag": "03 · DATA TOOLING",
-        "title": "3–4 years of data, one screen, zero budget",
-        "desc": "Campaign data sat in scattered Excel files for years. Built a dashboard using an internal tool nobody used — no dev resources, no directive.",
+        "title": "방치된 툴로 3~4년치 데이터를 한 화면에",
+        "desc": "3~4년치 캠페인 데이터가 엑셀로 흩어져 있었다. 아무도 안 쓰던 사내 툴로 직접 대시보드를 구축했다.",
         "resultNum": "100%",
-        "resultLabel": "self-initiated · 0 dev resources",
-        "context": "Three to four years of influencer group-buying campaign data was stored across individual Excel files. Retrieving performance data for a specific campaign or tracking cumulative creator contribution required manually opening and consolidating multiple files each time — an inefficient structure that created unnecessary friction in decision-making.",
-        "problem": "The data existed but was not usable in its current state. Repeated analyses — campaign performance comparison, creator contribution tracking — were being done manually every time. A solution was needed that required no new tool procurement or development resources.",
-        "role": "Contribution: 100%. Problem identification, tool selection, data cleaning, dashboard design, and build — all completed independently. A self-initiated project, started during overtime without any external directive.",
+        "resultLabel": "자발적 프로젝트 · 개발 리소스 없음",
+        "context": "3~4년치의 인플루언서 공동구매 캠페인 데이터가 개별 엑셀 파일로 분산 보관되어 있었다. 특정 캠페인의 성과를 조회하거나 크리에이터별 기여도를 확인하려면 매번 여러 파일을 열어 수동으로 취합해야 했다. 의사결정에 필요한 데이터를 꺼내는 데 불필요한 시간이 소요되는 구조였다.",
+        "problem": "데이터는 존재했지만 활용할 수 없는 상태였다. 캠페인 성과 비교, 크리에이터 기여도 추적 등 반복적으로 필요한 분석이 매번 수작업으로 이루어졌다. 별도의 툴 도입이나 개발 리소스 요청 없이 해결할 수 있는 방법이 필요했다.",
+        "role": "기여도 100%. 문제 인식, 툴 선정, 데이터 정제, 대시보드 설계 및 구축까지 전 과정 단독 진행. 별도 지시 없이 야근 중 자발적으로 시작한 프로젝트.",
         "approach": {
-          "intro": "An underutilized dashboard feature within an existing internal tool was identified. It was implementable without development resources, and work began immediately. The project was executed in three stages.",
+          "intro": "사내 툴 중 활용도가 거의 없던 대시보드 생성 기능을 발견했다. 별도 개발 리소스 없이 구현 가능한 수준이었고, 바로 작업에 착수했다. 작업은 세 단계로 진행했다.",
           "steps": [
             {
-              "title": "Data Collection and Integration",
-              "desc": "Distributed Excel files were consolidated into a single data source. Inconsistent formats and creator name variations across files were standardized under a unified schema."
+              "title": "데이터 수집 및 통합",
+              "desc": "분산된 엑셀 파일을 하나의 데이터 소스로 통합했다. 파일마다 다른 형식과 크리에이터 표기 방식을 단일 기준으로 정리했다."
             },
             {
-              "title": "Data Cleaning",
-              "desc": "Creator name discrepancies, missing values, and duplicate entries were resolved manually. Input format standards were established to ensure future data would accumulate consistently."
+              "title": "데이터 정제",
+              "desc": "크리에이터명 표기 불일치, 누락값, 중복 항목 등을 수작업으로 정리했다. 이후 동일한 기준으로 데이터가 계속 쌓일 수 있도록 입력 형식을 표준화했다."
             },
             {
-              "title": "Visualization",
-              "desc": "A dashboard was built around the most frequently needed metrics: GMV by campaign, cumulative contribution by creator, and performance by category."
+              "title": "시각화",
+              "desc": "캠페인별 GMV, 크리에이터별 누적 기여도, 카테고리별 성과 등 반복적으로 조회되는 지표를 중심으로 대시보드를 구성했다."
             }
           ],
           "outro": ""
         },
-        "result": "Manual retrieval and consolidation for campaign performance and creator contribution tracking was replaced by a single dashboard view. The tool saw active internal use until AI agent-based workflow automation became more widely adopted.",
-        "lesson": "The value of data is maximized through cleaning and structuring, not collection alone. If the format in which data is recorded is not standardized, even the best analysis tools will fail to deliver usable output. This project confirmed that standardizing data entry is a prerequisite for any analytics infrastructure.",
-        "improvement": "No formal onboarding was provided to the team after the dashboard was built. Knowing a tool exists and actually using it for decision-making are different things — closing that gap should have been part of the rollout."
+        "result": "캠페인 성과 조회와 크리에이터 기여도 확인에 소요되던 수작업이 대시보드 단일 화면으로 대체됐다. AI 에이전트 기반 업무 자동화가 보급되기 전까지 팀 내에서 실제로 활용됐다.",
+        "lesson": "데이터의 가치는 수집보다 정제와 구조화에서 극대화된다. 입력 형식이 통일되지 않은 데이터는 분석 툴이 있어도 활용이 어렵다. 이 작업을 통해 데이터 수집 단계의 표준화가 분석 인프라의 선결 조건임을 확인했다.",
+        "improvement": "운영 데이터가 대시보드 툴로 자동 적재되지 않는 구조였다. 수동 업데이트에 의존했기 때문에 관리 공백이 생기면 대시보드의 최신성이 보장되지 않았다. DB 직접 연동 또는 정기 업데이트 담당자를 지정하는 방식으로 운영 구조를 보완했어야 했다."
       }
     ]
   },
@@ -146,26 +146,26 @@
     "label": "BEYOND THE DESK",
     "items": [
       {
-        "location": "PARIS · 2024",
-        "desc": "As AliExpress's official Olympic partner, traveled to Paris with Korean creators — the first time the platform brought influencers together offline at this scale. It was a business trip. But what I remember most isn't the numbers."
+        "location": "파리, 2024",
+        "desc": "AliExpress 파리 올림픽 공식 후원사 자격으로, 한국 크리에이터들과 함께 파리에 방문. 플랫폼이 인플루언서들을 오프라인에서 대규모로 모집한 최초의 자리."
       },
       {
-        "location": "HANGZHOU · 2024",
-        "desc": "To mark the 11.11 Global Shopping Festival, coordinated 30+ influencer teams to Alibaba HQ in Hangzhou for on-site shoots — handling visas, logistics, and local escorts. All of it for the first time."
+        "location": "항저우, 2024",
+        "desc": "광군제를 기념해 인플루언서 30여 팀을 항저우 본사로 초대해 현장 촬영 진행."
       }
     ]
   },
   "contact": {
     "label": "CONTACT",
-    "cta": "If you have a problem worth looking into — let's talk.",
+    "cta": "언제든 연락주세요",
     "email": "lbj86@naver.com",
     "linkedin": "linkedin.com/in/beomjun-lee-1854501b1"
   },
   "resume": {
-    "name": "Beomjun Lee",
-    "title": "Marketing Manager",
-    "location": "Seoul, Korea",
-    "downloadPdf": "Download PDF",
+    "name": "이범준",
+    "title": "마케팅 매니저",
+    "location": "서울, 한국",
+    "downloadPdf": "PDF 다운로드",
     "sections": {
       "summary": "PROFESSIONAL SUMMARY",
       "highlights": "KEY HIGHLIGHTS",
@@ -175,49 +175,49 @@
       "education": "EDUCATION",
       "languages": "LANGUAGES"
     },
-    "summaryText": "Growth-focused marketing professional with 7+ years of experience across content, creator ecosystems, and eCommerce. Specializing in influencer partnerships, data-driven campaign operations, and cross-functional collaboration between Korean and Chinese organizations.",
+    "summaryText": "7년 이상의 콘텐츠, 크리에이터 생태계 및 이커머스 분야 경험을 보유한 그로스 마케터. 인플루언서 파트너십, 데이터 기반 캠페인 운영, 그리고 한국과 중국 조직 간 크로스펑셔널 협업에 특화되어 있습니다.",
     "competencies": [
-      "AI Content Creation",
-      "AIGC Workflow",
-      "Content Strategy",
-      "Creator Ecosystem",
-      "Brand Marketing",
-      "Integrated Campaign",
-      "Growth Marketing",
-      "Business Development",
-      "Strategic Partnerships",
-      "Cross-border eCommerce",
-      "Local Promotions",
-      "Project Management",
-      "Data Analytics",
-      "Market Expansion",
-      "Cross-functional Collaboration"
+      "AI 콘텐츠 제작",
+      "AIGC 워크플로우",
+      "콘텐츠 전략",
+      "크리에이터 생태계",
+      "브랜드 마케팅",
+      "통합 마케팅",
+      "그로스 마케팅",
+      "비즈니스 개발",
+      "전략적 파트너십",
+      "크로스보더 이커머스",
+      "로컬 프로모션",
+      "프로젝트 관리",
+      "데이터 분석",
+      "시장 확장",
+      "유관 부서 협업"
     ],
     "experience": [
       {
         "company": "AliExpress Korea",
-        "companyFull": "AliExpress Korea · Alibaba International Digital Commerce Group",
-        "period": "Jan 2024 – Present",
+        "companyFull": "AliExpress Korea · 알리바바 인터내셔널 디지털 커머스 그룹",
+        "period": "2024년 1월 – 현재",
         "roles": [
           {
-            "title": "AI Content Operations",
-            "period": "Jul 2026 – Present",
+            "title": "AI 콘텐츠 운영",
+            "period": "2026년 7월 – 현재",
             "bullets": [
-              "End-to-end production of AI-powered YouTube Shorts for AliExpress Korea's official channel — topic selection, scripting, AI video generation, editing, and publishing.",
-              "Built an AI content production workflow using HappyHorse, ChatGPT, and Claude. Maintaining 3–5 uploads per week."
+              "AliExpress Korea 공식 채널의 AI 기반 유튜브 쇼츠 제작 전 과정 담당 — 선정, 스크립트 작성, AI 영상 생성, 편집 및 발행.",
+              "HappyHorse, ChatGPT, Claude를 활용한 AI 콘텐츠 제작 워크플로우 구축. 주 3~5편 업로드 유지."
             ]
           },
           {
-            "title": "Influencer Group-Buying Operations",
-            "period": "Jan 2024 – Present",
+            "title": "인플루언서 공동구매 운영",
+            "period": "2024년 1월 – 현재",
             "bullets": [
-              "Led influencer group-buying operations across cross-border and domestic markets in Korea.",
-              "Achieved annual cross-border GMV of US$5.5M, secured 4 new key partnership channels, and reached a 10% hit rate for best-selling products.",
-              "Planned, executed, and reviewed 750+ campaigns end-to-end, contributing US$11.7M in cumulative domestic GMV.",
-              "Identified high-potential products through data analysis and matched them with suitable creators — cultivated 2 mid-tier influencers (3K–5K followers) who each generated an average of ~US$200K GMV per campaign.",
-              "Served as PM for S-tier large-scale promotions, coordinating 100+ influencers per campaign alongside monthly A-tier promotions.",
-              "Contributed to planning the in-app \"Group Deal\" feature and oversaw local market operations and cross-functional execution.",
-              "Built an influencer marketing data dashboard consolidating historical campaign data for real-time KPI tracking and decision support."
+              "한국 크로스보더 및 국내 시장 인플루언서 공동구매 운영 전반 주도.",
+              "연간 크로스보더 GMV 550만 달러 달성, 핵심 협력 채널 4개 신규 확보, 히트 상품 발굴률 10% 달성.",
+              "750회 이상 캠페인 기획·실행·리뷰 전 과정 관리, 국내 GMV 1,170만 달러 누적 기여.",
+              "데이터 분석으로 잠재력 있는 상품을 발굴하고 적합한 크리에이터와 정밀 매칭 — 중소형 인플루언서(팔로워 3K~5K) 2명 육성, 1회 캠페인 평균 약 20만 달러 GMV 창출.",
+              "S급 대형 프로모션 프로젝트 PM 담당, 회차별 100여 명의 인플루언서 조율 및 월별 A급 프로모션 병행 실행.",
+              "앱 내 「Group Deal(공동구매)」 기능 개발 참여 — 한국 시장 로컬 운영 및 유관 부서 간 프로젝트 추진.",
+              "인플루언서 마케팅 데이터 대시보드 구축 — 과거 활동 데이터 통합, 마케팅 KPI 실시간 시각화 및 의사결정 지원."
             ]
           }
         ]
@@ -225,17 +225,17 @@
       {
         "company": "Semicolon Studio (SNOW)",
         "companyFull": "Semicolon Studio (SNOW)",
-        "period": "Feb 2020 – Dec 2023",
+        "period": "2020년 2월 – 2023년 12월",
         "roles": [
           {
-            "title": "Marketing Manager / PD",
-            "period": "Feb 2020 – Dec 2023",
+            "title": "마케팅 매니저 / PD",
+            "period": "2020년 2월 – 2023년 12월",
             "bullets": [
-              "Managed film and drama marketing, content planning, influencer marketing, and brand content operations.",
-              "Handled key partner account management (Naver, Naver Cloud, Webtoon).",
-              "Achieved 36.5M cumulative content views.",
-              "Served as content producer for YouTube channel 《PIXID》, accumulating 25M total views.",
-              "Participated in commercial film 《Dr. Cheon and the Lost Talisman》 production — script review and post-production, contributing to 1.91M admissions."
+              "영화·드라마 마케팅, 콘텐츠 기획, 인플루언서 마케팅 및 브랜드 콘텐츠 운영 담당.",
+              "핵심 파트너사 관리 담당 (Naver, Naver Cloud, Webtoon).",
+              "누적 콘텐츠 조회수 3,650만 회 달성.",
+              "YouTube 채널 《PIXID》 콘텐츠 기획 담당 — 채널 초기 구축 참여, 누적 2,500만 조회수 달성.",
+              "상업 영화 《천박사 퇴마 연구소》 제작 참여 — 시나리오 검토 및 후반 작업 담당, 최종 누적 관객 수 191만 명 달성."
             ]
           }
         ]
@@ -243,16 +243,16 @@
       {
         "company": "CJ ENM",
         "companyFull": "CJ ENM",
-        "period": "Dec 2018 – Jan 2020",
+        "period": "2018년 12월 – 2020년 1월",
         "roles": [
           {
-            "title": "Content Marketing Manager (Contract)",
-            "period": "Dec 2018 – Jan 2020",
+            "title": "콘텐츠 마케팅 매니저 (프리랜서)",
+            "period": "2018년 12월 – 2020년 1월",
             "bullets": [
-              "Managed Chinese-speaking influencer partnerships and digital content operations.",
-              "Grew YouTube channel subscriber base to 190K.",
-              "Accumulated 9.48M views through content planning and production.",
-              "Related marketing content achieved 29M+ cumulative views."
+              "중국어권 인플루언서 협업 및 디지털 콘텐츠 운영 담당.",
+              "YouTube 채널 운영, 구독자 19만 명 성장.",
+              "콘텐츠 기획 및 제작 참여, 누적 조회수 948만 회 달성.",
+              "관련 마케팅 콘텐츠 누적 조회수 2,900만 회 돌파."
             ]
           }
         ]
@@ -260,52 +260,66 @@
     ],
     "projects": [
       {
-        "title": "AliExpress × Itsub × Intel — 3-Way Co-Branded Campaign",
-        "period": "Jun 2025",
+        "title": "AliExpress × 잇섭 × 인텔 — 3자 코브랜딩 캠페인",
+        "period": "2025년 6월",
         "bullets": [
-          "Executed a co-branded group-buying campaign involving AliExpress, YouTube tech creator Itsub (2.8M subscribers), and Intel — managing end-to-end operations across multiple stakeholders.",
-          "Led cross-team alignment with Legal, Risk, CS, and Dev teams over one month to preemptively address technical and compliance risks.",
-          "Achieved $1.2M+ GMV. Resolved a full-order cancellation incident within 18 hours through direct user communication and rapid internal escalation — a process that typically takes 7–14 days."
+          "AliExpress, 유튜브 테크 크리에이터 잇섭(구독자 280만), 인텔이 참여한 코브랜딩 공동구매 캠페인 기획·운영 전 과정 담당.",
+          "약 한 달간 법무·리스크·CS·개발팀과의 크로스팀 협업을 주도해 기술 및 컴플라이언스 리스크를 사전 차단.",
+          "GMV 120만 달러 이상 달성. 전량 취소 사고를 18시간 이내 해결 — 통상 7~14일 소요되는 프로세스."
         ]
       },
       {
-        "title": "AliExpress × Charm PD — Delivering Freshness (신선을 알리다)",
-        "period": "Mar–May 2025",
+        "title": "AliExpress × 참피디 — 신선을 알리다",
+        "period": "2025년 3월 – 5월",
         "bullets": [
-          "Planned and launched AliExpress Korea's first serialized content-commerce series, pairing on-site farm visits with limited-time flash deals.",
-          "Achieved 10,000+ unit sell-out within 1 hour per event, $150K+ GMV per event, and approximately 1,500+ new user conversions.",
-          "Introduced a repeatable content-commerce format — the first of its kind on the platform."
+          "AliExpress Korea 최초의 시리얼 콘텐츠 커머스 시리즈 기획·런칭 — 현장 농장 방문과 한정 특가 이벤트를 결합.",
+          "이벤트당 1시간 이내 1만 건 이상 완판, 이벤트당 GMV 15만 달러 이상, 신규 유저 약 1,500명 전환.",
+          "플랫폼 최초의 반복 가능한 콘텐츠 커머스 포맷 도입."
         ]
       },
       {
-        "title": "Group Deal — In-App Feature Planning & Operations",
-        "period": "2024–2026",
+        "title": "Group Deal — 앱 내 기능 기획 및 운영",
+        "period": "2024년 – 2026년",
         "bullets": [
-          "Participated in the initial planning of a threshold-based group-buying feature, coordinating across Korean legal, MD, and HQ development teams.",
-          "Solely managed end-to-end local deal operations for 2 years — campaign setup, seller coordination, budget allocation, and performance tracking.",
-          "Orchestrated 750+ local deals in 2025, contributing to $11.7M GMV."
+          "목표 인원 달성 시 할인이 적용되는 공동구매 기능 초기 기획 개발 참여 — 한국 법무·MD팀 및 본사 개발팀 조율.",
+          "2년간 그룹딜 운영 전 과정 단독 담당 — 캠페인 세팅, 셀러 조율, 예산 배분, 성과 추적.",
+          "2025년 총 750회 이상의 그룹딜 운영, GMV 1,170만 달러 기여."
         ]
       }
     ],
     "education": [
       {
-        "school": "Tsinghua University, China",
-        "degree": "B.A. in Journalism & Communication",
-        "period": "Sep 2010 – Jul 2016"
+        "school": "칭화대학교 (중국)",
+        "degree": "신문방송학과 학사",
+        "period": "2010년 9월 – 2016년 7월"
       }
     ],
     "languages": [
       {
-        "lang": "Korean",
-        "level": "Native"
+        "lang": "한국어",
+        "level": "모국어"
       },
       {
-        "lang": "Chinese",
-        "level": "Business Proficient"
+        "lang": "중국어",
+        "level": "비즈니스 수준"
       },
       {
-        "lang": "English",
-        "level": "Conversational"
+        "lang": "영어",
+        "level": "비즈니스 커뮤니케이션"
+      }
+    ],
+    "highlights": [
+      {
+        "num": "1,720만 달러",
+        "label": "연간 창출 GMV"
+      },
+      {
+        "num": "900회 이상",
+        "label": "캠페인 운영"
+      },
+      {
+        "num": "구독자 3천 명 → 20만 달러",
+        "label": "적은 팔로워로 GMV 최대화"
       }
     ]
   }
