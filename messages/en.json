@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "about": "ABOUT",
+    "cases": "CASES",
+    "resume": "RESUME",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "line1": "Every outcome has a cause.",
+    "line2": "I find it.",
+    "sub": "There's an order beneath the chaos — in data, in markets, in people. My job is to find it."
+  },
+  "highlights": {
+    "label": "KEY HIGHLIGHTS",
+    "items": [
+      { "num": "$17.2M", "label": "Annual GMV generated" },
+      { "num": "900+", "label": "Campaigns operated" },
+      { "num": "3K → $200K", "label": "Followers to GMV per campaign" }
+    ]
+  },
+  "when": {
+    "label": "WHEN YOU NEED ME",
+    "items": [
+      "You have data, but no clear answer for why things turned out the way they did.",
+      "The more stakeholders involved, the slower everything gets — and something always gets lost.",
+      "You move fast, but when things break, there's no one to own the fix end-to-end.",
+      "A campaign underperformed and you're not sure why — or how to prevent it next time."
+    ]
+  },
+  "collaborated": {
+    "label": "COLLABORATED WITH"
+  },
+  "cases": {
+    "label": "CASES",
+    "viewAll": "View all cases",
+    "readCase": "Read case",
+    "items": [
+      {
+        "slug": "creator-discovery",
+        "tag": "01 · DATA ANALYSIS",
+        "title": "Finding a $200K creator in a 3,000-follower channel",
+        "desc": "Platform sales data revealed Tesla accessories were outperforming — leading to a creator discovery that broke every assumption about follower count.",
+        "resultNum": "$200K",
+        "resultLabel": "avg GMV · 3K subscribers",
+        "context": "AliExpress Korea's influencer group-buying operates on a CPS (Cost Per Sale) model — commissions are paid based on sales performance, with no upfront fees. Actual sales conversion, not channel size, is the core criteria for partner selection.",
+        "problem": "Subscriber count indicates reach, but does not correlate directly with purchase conversion. Follower-based channel selection showed low predictive accuracy, and cases of small channels outperforming large ones were repeatedly observed. A quantifiable framework for evaluating sales potential in advance was needed.",
+        "role": "Contribution: ~95%. End-to-end ownership — channel discovery, data tracking, outreach, and contract structure design.",
+        "approach": {
+          "intro": "Shifted the channel selection criteria from follower count to the density of purchase-intent audiences. Three indicators were used to evaluate channels.",
+          "steps": [
+            { "title": "Inbound Data Tracking", "desc": "Identified YouTube channels that had reviewed AliExpress-listed products, then tracked actual platform inflow and purchase conversion data through links in video descriptions." },
+            { "title": "Community Engagement Pattern", "desc": "Channels that communicated directly with followers through separate channels (e.g., open KakaoTalk chats) tended to attract prospective buyers rather than passive content consumers." },
+            { "title": "Content Purpose", "desc": "Channels focused on delivering information and deals — rather than entertainment — showed higher viewer-to-buyer conversion rates." }
+          ],
+          "outro": "Applying these criteria, a Tesla accessories channel with approximately 3,000 subscribers was identified. Meaningful sales contribution was pre-confirmed through link tracking data, and the community engagement pattern matched the target profile."
+        },
+        "result": "Average GMV per campaign: $200K+. Equivalent to the output typically seen from channels with 100K+ subscribers. The same discovery framework applied to a running shoe channel (also several thousand subscribers) produced consistent results of $200K+ per campaign.",
+        "lesson": "Follower count is an indicator of reach, not conversion. Purchase behavior is determined by the type of audience a channel attracts — not its size. Viewers who come for information and deals behave differently from those who come for content. This framework was applied to subsequent category expansion (automotive accessories) and produced repeatable results.",
+        "improvement": "The discovery criteria remained personal know-how rather than a formalized scoring system. While insights were shared in team review sessions, a standardized evaluation framework was never documented — which limited scalability across the team."
+      },
+      {
+        "slug": "itsub-crisis",
+        "tag": "02 · CRISIS MANAGEMENT",
+        "title": "18 hours to resolve a full-order cancellation",
+        "desc": "A human error triggered a total order cancellation on a 2.8M-subscriber creator campaign. Resolved in 18 hours. Industry standard: 7–14 days.",
+        "resultNum": "18h",
+        "resultLabel": "resolution · vs 7–14 day standard",
+        "context": "In June 2025, a co-branded group-buying campaign was planned and executed involving Intel, Itsub, and AliExpress. Itsub is a tech YouTuber with 2.8M+ subscribers — a high-opportunity, high-risk partnership where any negative experience for followers could directly translate into brand damage.",
+        "problem": "At midnight on the final day of the one-week campaign, all orders were converted to a full cancellation. The cause was a human error: the 'cancel all orders if sales target is not met' option had been left active during event setup. As the cancellation triggered, viewer complaints began flooding the comments section of the creator's channel.",
+        "role": "Contribution: ~90%. Led the full response — incident recognition, internal reporting, solution design, stakeholder coordination, direct user communication, and drafting and approving the public notice. Final decisions were made with approval from the Korea General Manager and team lead.",
+        "approach": {
+          "intro": "Three tracks were executed in parallel immediately upon identifying the incident.",
+          "steps": [
+            { "title": "Internal Reporting and Decision-Making", "desc": "At 1 AM, the situation was reported to the team lead, department head, and Korea GM. The creator was also informed in real time. The resolution direction converged quickly under a single principle: customer experience first — all affected buyers would be given the opportunity to repurchase at a price lower than the original." },
+            { "title": "Emergency Budget Approval and Re-setup", "desc": "The original payment discount budget had expired with the event's close. An emergency budget request was submitted, and re-setup began immediately upon approval." },
+            { "title": "Direct User Communication", "desc": "A dedicated inquiry inbox was opened for direct responses. Comments on the YouTube video were addressed one by one. Responsibility was clearly attributed to AliExpress to prevent backlash from being directed toward the creator." }
+          ],
+          "outro": "The public notice was drafted, refined with GPT assistance, and submitted for urgent review to Legal and PR teams — who responded despite it being the weekend. Final approval was obtained before publishing."
+        },
+        "result": "From incident recognition to final public notice: under 18 hours. The same type of incident typically takes 7–14 days to resolve internally. The creator responded positively to the speed of response and the measures taken to protect followers. The campaign concluded without lasting brand damage.",
+        "lesson": "Human error is an inevitable byproduct of complex manual setup processes. Following this incident, a double-check protocol for critical option values was introduced to the event setup workflow.",
+        "improvement": "Response speed was fast, but approximately 30 minutes were spent assessing the situation alone before reporting. The more efficient sequence would have been to report immediately and conduct the assessment in parallel."
+      },
+      {
+        "slug": "dashboard",
+        "tag": "03 · DATA TOOLING",
+        "title": "3–4 years of data, one screen, zero budget",
+        "desc": "Campaign data sat in scattered Excel files for years. Built a dashboard using an internal tool nobody used — no dev resources, no directive.",
+        "resultNum": "100%",
+        "resultLabel": "self-initiated · 0 dev resources",
+        "context": "Three to four years of influencer group-buying campaign data was stored across individual Excel files. Retrieving performance data for a specific campaign or tracking cumulative creator contribution required manually opening and consolidating multiple files each time — an inefficient structure that created unnecessary friction in decision-making.",
+        "problem": "The data existed but was not usable in its current state. Repeated analyses — campaign performance comparison, creator contribution tracking — were being done manually every time. A solution was needed that required no new tool procurement or development resources.",
+        "role": "Contribution: 100%. Problem identification, tool selection, data cleaning, dashboard design, and build — all completed independently. A self-initiated project, started during overtime without any external directive.",
+        "approach": {
+          "intro": "An underutilized dashboard feature within an existing internal tool was identified. It was implementable without development resources, and work began immediately. The project was executed in three stages.",
+          "steps": [
+            { "title": "Data Collection and Integration", "desc": "Distributed Excel files were consolidated into a single data source. Inconsistent formats and creator name variations across files were standardized under a unified schema." },
+            { "title": "Data Cleaning", "desc": "Creator name discrepancies, missing values, and duplicate entries were resolved manually. Input format standards were established to ensure future data would accumulate consistently." },
+            { "title": "Visualization", "desc": "A dashboard was built around the most frequently needed metrics: GMV by campaign, cumulative contribution by creator, and performance by category." }
+          ],
+          "outro": ""
+        },
+        "result": "Manual retrieval and consolidation for campaign performance and creator contribution tracking was replaced by a single dashboard view. The tool saw active internal use until AI agent-based workflow automation became more widely adopted.",
+        "lesson": "The value of data is maximized through cleaning and structuring, not collection alone. If the format in which data is recorded is not standardized, even the best analysis tools will fail to deliver usable output. This project confirmed that standardizing data entry is a prerequisite for any analytics infrastructure.",
+        "improvement": "No formal onboarding was provided to the team after the dashboard was built. Knowing a tool exists and actually using it for decision-making are different things — closing that gap should have been part of the rollout."
+      }
+    ]
+  },
+  "beyond": {
+    "label": "BEYOND THE DESK",
+    "items": [
+      {
+        "location": "PARIS · 2024",
+        "desc": "As AliExpress's official Olympic partner, traveled to Paris with Korean creators — the first time the platform brought influencers together offline at this scale. It was a business trip. But what I remember most isn't the numbers."
+      },
+      {
+        "location": "HANGZHOU · 2024",
+        "desc": "To mark the 11.11 Global Shopping Festival, coordinated 30+ influencer teams to Alibaba HQ in Hangzhou for on-site shoots — handling visas, logistics, and local escorts. All of it for the first time."
+      }
+    ]
+  },
+  "contact": {
+    "label": "CONTACT",
+    "cta": "If you have a problem worth looking into — let's talk.",
+    "email": "lbj86@naver.com",
+    "linkedin": "linkedin.com/in/beomjun-lee-1854501b1"
+  },
+  "resume": {
+    "name": "Beomjun Lee",
+    "title": "Marketing Manager",
+    "location": "Seoul, Korea",
+    "downloadPdf": "Download PDF",
+    "sections": {
+      "summary": "PROFESSIONAL SUMMARY",
+      "highlights": "KEY HIGHLIGHTS",
+      "competencies": "CORE COMPETENCIES",
+      "experience": "EXPERIENCE",
+      "projects": "PROJECTS",
+      "education": "EDUCATION",
+      "languages": "LANGUAGES"
+    },
+    "summaryText": "Growth-focused marketing professional with 7+ years of experience across content, creator ecosystems, and eCommerce. Specializing in influencer partnerships, data-driven campaign operations, and cross-functional collaboration between Korean and Chinese organizations.",
+    "competencies": ["AI Content Creation", "AIGC Workflow", "Content Strategy", "Creator Ecosystem", "Brand Marketing", "Integrated Campaign", "Growth Marketing", "Business Development", "Strategic Partnerships", "Cross-border eCommerce", "Local Promotions", "Project Management", "Data Analytics", "Market Expansion", "Cross-functional Collaboration"],
+    "experience": [
+      {
+        "company": "AliExpress Korea",
+        "companyFull": "AliExpress Korea · Alibaba International Digital Commerce Group",
+        "period": "Jan 2024 – Present",
+        "roles": [
+          {
+            "title": "AI Content Operations",
+            "period": "Jul 2026 – Present",
+            "bullets": [
+              "End-to-end production of AI-powered YouTube Shorts for AliExpress Korea's official channel — topic selection, scripting, AI video generation, editing, and publishing.",
+              "Built an AI content production workflow using HappyHorse, ChatGPT, and Claude. Maintaining 3–5 uploads per week."
+            ]
+          },
+          {
+            "title": "Influencer Group-Buying Operations",
+            "period": "Jan 2024 – Present",
+            "bullets": [
+              "Led influencer group-buying operations across cross-border and domestic markets in Korea.",
+              "Achieved annual cross-border GMV of US$5.5M, secured 4 new key partnership channels, and reached a 10% hit rate for best-selling products.",
+              "Planned, executed, and reviewed 750+ campaigns end-to-end, contributing US$11.7M in cumulative domestic GMV.",
+              "Identified high-potential products through data analysis and matched them with suitable creators — cultivated 2 mid-tier influencers (3K–5K followers) who each generated an average of ~US$200K GMV per campaign.",
+              "Served as PM for S-tier large-scale promotions, coordinating 100+ influencers per campaign alongside monthly A-tier promotions.",
+              "Contributed to planning the in-app \"Group Deal\" feature and oversaw local market operations and cross-functional execution.",
+              "Built an influencer marketing data dashboard consolidating historical campaign data for real-time KPI tracking and decision support."
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Semicolon Studio (SNOW)",
+        "companyFull": "Semicolon Studio (SNOW)",
+        "period": "Feb 2020 – Dec 2023",
+        "roles": [
+          {
+            "title": "Marketing Manager / PD",
+            "period": "Feb 2020 – Dec 2023",
+            "bullets": [
+              "Managed film and drama marketing, content planning, influencer marketing, and brand content operations.",
+              "Handled key partner account management (Naver, Naver Cloud, Webtoon).",
+              "Achieved 36.5M cumulative content views.",
+              "Served as content producer for YouTube channel 《PIXID》, accumulating 25M total views.",
+              "Participated in commercial film 《Dr. Cheon and the Lost Talisman》 production — script review and post-production, contributing to 1.91M admissions."
+            ]
+          }
+        ]
+      },
+      {
+        "company": "CJ ENM",
+        "companyFull": "CJ ENM",
+        "period": "Dec 2018 – Jan 2020",
+        "roles": [
+          {
+            "title": "Content Marketing Manager (Contract)",
+            "period": "Dec 2018 – Jan 2020",
+            "bullets": [
+              "Managed Chinese-speaking influencer partnerships and digital content operations.",
+              "Grew YouTube channel subscriber base to 190K.",
+              "Accumulated 9.48M views through content planning and production.",
+              "Related marketing content achieved 29M+ cumulative views."
+            ]
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "AliExpress × Itsub × Intel — 3-Way Co-Branded Campaign",
+        "period": "Jun 2025",
+        "bullets": [
+          "Executed a co-branded group-buying campaign involving AliExpress, YouTube tech creator Itsub (2.8M subscribers), and Intel — managing end-to-end operations across multiple stakeholders.",
+          "Led cross-team alignment with Legal, Risk, CS, and Dev teams over one month to preemptively address technical and compliance risks.",
+          "Achieved $1.2M+ GMV. Resolved a full-order cancellation incident within 18 hours through direct user communication and rapid internal escalation — a process that typically takes 7–14 days."
+        ]
+      },
+      {
+        "title": "AliExpress × Charm PD — Delivering Freshness (신선을 알리다)",
+        "period": "Mar–May 2025",
+        "bullets": [
+          "Planned and launched AliExpress Korea's first serialized content-commerce series, pairing on-site farm visits with limited-time flash deals.",
+          "Achieved 10,000+ unit sell-out within 1 hour per event, $150K+ GMV per event, and approximately 1,500+ new user conversions.",
+          "Introduced a repeatable content-commerce format — the first of its kind on the platform."
+        ]
+      },
+      {
+        "title": "Group Deal — In-App Feature Planning & Operations",
+        "period": "2024–2026",
+        "bullets": [
+          "Participated in the initial planning of a threshold-based group-buying feature, coordinating across Korean legal, MD, and HQ development teams.",
+          "Solely managed end-to-end local deal operations for 2 years — campaign setup, seller coordination, budget allocation, and performance tracking.",
+          "Orchestrated 750+ local deals in 2025, contributing to $11.7M GMV."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "Tsinghua University, China",
+        "degree": "B.A. in Journalism & Communication",
+        "period": "Sep 2010 – Jul 2016"
+      }
+    ],
+    "languages": [
+      { "lang": "Korean", "level": "Native" },
+      { "lang": "Chinese", "level": "Business Proficient" },
+      { "lang": "English", "level": "Conversational" }
+    ]
+  }
+}
