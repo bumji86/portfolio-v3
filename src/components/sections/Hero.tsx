@@ -106,7 +106,7 @@ export default function Hero() {
 
         {/* Character image */}
         <Image
-          src="/character.png"
+          src="/character-transparent.png"
           alt="Bumji character"
           width={480}
           height={480}

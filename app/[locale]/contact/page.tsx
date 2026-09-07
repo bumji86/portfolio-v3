@@ -7,16 +7,14 @@ export default async function ContactPage() {
   return (
     <main>
       <Nav />
-      <section className="px-10 py-24">
-        <p className="text-xs tracking-widest text-gray-300 mb-10 uppercase">{t('label')}</p>
-        <p className="font-serif text-4xl tracking-tight mb-12 max-w-lg leading-snug">{t('cta')}</p>
-        <div className="flex flex-col gap-3">
-          <a href={`mailto:${t('email')}`} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            {t('email')}
-          </a>
-          <a href={`https://${t('linkedin')}`} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            {t('linkedin')}
-          </a>
+      <section className="page-shell">
+        <div className="surface-card contact-panel">
+          <p className="text-eyebrow contact-panel__kicker">{t('label')}</p>
+          <h1 className="text-display-lg contact-panel__heading">{t('cta')}</h1>
+          <div className="contact-panel__links">
+            <a href={`mailto:${t('email')}`} className="btn-primary">{t('email')} →</a>
+            <a href={`https://${t('linkedin')}`} target="_blank" rel="noopener noreferrer" className="text-body-sm">LinkedIn →</a>
+          </div>
         </div>
       </section>
     </main>

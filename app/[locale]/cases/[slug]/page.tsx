@@ -1,5 +1,5 @@
 import Nav from '@/components/layout/Nav';
-import { getTranslations, getLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 type Step = { title: string; desc: string };
@@ -23,7 +23,6 @@ export default async function CasePage({
 }) {
   const { slug } = await params;
   const t = await getTranslations('cases');
-  const locale = await getLocale();
   const items = t.raw('items') as CaseItem[];
   const item = items.find((i) => i.slug === slug);
 
@@ -38,67 +37,59 @@ export default async function CasePage({
   return (
     <main>
       <Nav />
-      <article className="px-10 py-16 max-w-3xl">
-        <p className="text-xs tracking-widest text-gray-300 mb-6">{item.tag}</p>
-        <h1 className="font-serif text-4xl leading-tight tracking-tight mb-16">{item.title}</h1>
+      <article className="page-shell page-shell--narrow">
+        <header className="surface-card detail-hero">
+          <p className="text-eyebrow detail-hero__tag">{item.tag}</p>
+          <h1 className="text-display-lg">{item.title}</h1>
+        </header>
 
-        <div className="flex flex-col gap-12">
+        <div className="detail-content">
           {sections.map((s) => (
-            <div key={s.label} className="grid grid-cols-4 gap-8">
-              <div className="col-span-1">
-                <p className="text-xs tracking-widest text-gray-300 pt-1">{s.label}</p>
+            <section key={s.label} className="surface-card detail-section">
+              <p className="text-eyebrow detail-section__label">{s.label}</p>
+              <div>
+                <p className="text-body-sm detail-section__body">{s.content}</p>
               </div>
-              <div className="col-span-3">
-                <p className="text-sm text-gray-600 leading-relaxed">{s.content}</p>
-              </div>
-            </div>
+            </section>
           ))}
 
-          <div className="grid grid-cols-4 gap-8">
-            <div className="col-span-1">
-              <p className="text-xs tracking-widest text-gray-300 pt-1">APPROACH</p>
-            </div>
-            <div className="col-span-3">
+          <section className="surface-card detail-section detail-section--accent">
+            <p className="text-eyebrow detail-section__label">APPROACH</p>
+            <div>
               {item.approach.intro && (
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">{item.approach.intro}</p>
+                <p className="text-body-sm detail-section__body" style={{ marginBottom: '24px' }}>{item.approach.intro}</p>
               )}
-              <div className="flex flex-col gap-5">
+              <div>
                 {item.approach.steps.map((step, i) => (
-                  <div key={i} className="flex gap-4">
-                    <span className="text-xs text-gray-300 pt-0.5 shrink-0">0{i + 1}</span>
+                  <div key={i} className="detail-step">
+                    <span className="text-caption detail-step__number">0{i + 1}</span>
                     <div>
-                      <p className="text-sm font-medium text-gray-700 mb-1">{step.title}</p>
-                      <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+                      <p className="text-body-sm detail-step__title">{step.title}</p>
+                      <p className="text-body-sm detail-section__body">{step.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
               {item.approach.outro && (
-                <p className="text-sm text-gray-600 leading-relaxed mt-6">{item.approach.outro}</p>
+                <p className="text-body-sm detail-section__body" style={{ marginTop: '24px' }}>{item.approach.outro}</p>
               )}
             </div>
-          </div>
+          </section>
 
-          <div className="grid grid-cols-4 gap-8">
-            <div className="col-span-1">
-              <p className="text-xs tracking-widest text-gray-300 pt-1">RESULT</p>
+          <section className="surface-card detail-section">
+            <p className="text-eyebrow detail-section__label">RESULT</p>
+            <div>
+              <p className="text-body-sm detail-section__body">{item.result}</p>
             </div>
-            <div className="col-span-3">
-              <p className="text-sm text-gray-600 leading-relaxed">{item.result}</p>
-            </div>
-          </div>
+          </section>
 
-          <div className="border-t border-gray-100 pt-10 grid grid-cols-4 gap-8">
-            <div className="col-span-1">
-              <p className="text-xs tracking-widest text-gray-300 pt-1">LESSON</p>
+          <section className="surface-card detail-section">
+            <p className="text-eyebrow detail-section__label">LESSON</p>
+            <div>
+              <p className="text-body-sm detail-section__body">{item.lesson}</p>
+              <p className="text-body-sm detail-note">{item.improvement}</p>
             </div>
-            <div className="col-span-3">
-              <p className="text-sm text-gray-600 leading-relaxed mb-4">{item.lesson}</p>
-              <p className="text-sm text-gray-400 leading-relaxed border-l-2 border-gray-100 pl-4">
-                {item.improvement}
-              </p>
-            </div>
-          </div>
+          </section>
         </div>
       </article>
     </main>

@@ -1,6 +1,5 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 
 export default function BeyondDesk() {
   const t = useTranslations('beyond');

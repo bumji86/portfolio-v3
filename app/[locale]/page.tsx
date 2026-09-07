@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import Nav from '@/components/layout/Nav';
 import Hero from '@/components/sections/Hero';
 import Highlights from '@/components/sections/Highlights';

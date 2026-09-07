@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import Nav from '@/components/layout/Nav';
 import Link from 'next/link';
 import { getTranslations, getLocale } from 'next-intl/server';
@@ -18,27 +17,25 @@ export default async function CasesPage() {
   return (
     <main>
       <Nav />
-      <section className="px-10 py-16">
-        <p className="text-xs tracking-widest text-gray-300 mb-12 uppercase">{t('label')}</p>
-        <div className="flex flex-col divide-y divide-gray-100">
+      <section className="page-shell">
+        <p className="text-eyebrow page-kicker">{t('label')}</p>
+        <h1 className="text-display-lg page-heading">Selected work, measured in outcomes.</h1>
+        <p className="text-body-lg page-intro">Growth, creator, and data projects built from a clear question through to a tangible result.</p>
+        <div className="case-list">
           {items.map((item) => (
             <Link
               key={item.slug}
               href={`/${locale}/cases/${item.slug}`}
-              className="py-10 grid grid-cols-12 gap-8 group hover:bg-gray-50 -mx-10 px-10 transition-colors"
+              className="surface-card case-card"
             >
-              <div className="col-span-1">
-                <p className="text-xs text-gray-300">{item.tag.split('·')[0].trim()}</p>
+              <p className="text-eyebrow case-card__tag">{item.tag}</p>
+              <div>
+                <h2 className="text-headline case-card__title">{item.title}</h2>
+                <p className="text-body-sm case-card__description">{item.desc}</p>
               </div>
-              <div className="col-span-7">
-                <h2 className="font-serif text-2xl tracking-tight leading-snug mb-3 group-hover:text-gray-600 transition-colors">
-                  {item.title}
-                </h2>
-                <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
-              </div>
-              <div className="col-span-4 text-right">
-                <div className="font-serif text-3xl tracking-tight">{item.resultNum}</div>
-                <div className="text-xs text-gray-300 mt-1">{item.resultLabel}</div>
+              <div className="case-card__result">
+                <p className="case-card__number">{item.resultNum}</p>
+                <p className="text-caption case-card__result-label">{item.resultLabel}</p>
               </div>
             </Link>
           ))}
