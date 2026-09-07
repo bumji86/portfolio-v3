@@ -6,13 +6,29 @@ export default function WhenYouNeedMe() {
   const items = t.raw('items') as string[];
 
   return (
-    <section className="px-10 py-16 border-b border-gray-100">
-      <p className="text-xs tracking-widest text-gray-300 mb-10 uppercase">{t('label')}</p>
-      <div className="flex flex-col gap-5 max-w-xl">
+    <section style={{
+      background: 'var(--color-block-lime)',
+      borderRadius: 'var(--radius-lg)',
+      margin: '96px 40px',
+      maxWidth: '1200px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      padding: '64px 64px',
+    }}>
+      <p className="text-eyebrow" style={{ marginBottom: '40px', opacity: 0.6 }}>
+        {t('label')}
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
         {items.map((item, i) => (
-          <div key={i} className="flex gap-4 items-start">
-            <div className="w-1.5 h-1.5 rounded-full bg-gray-300 mt-2 shrink-0" />
-            <p className="text-sm text-gray-500 leading-relaxed">{item}</p>
+          <div key={i} style={{
+            padding: '20px 0',
+            borderBottom: i < items.length - 1 ? '1px solid rgba(0,0,0,0.12)' : 'none',
+            display: 'flex', gap: '20px', alignItems: 'flex-start',
+          }}>
+            <span className="text-caption" style={{ opacity: 0.4, paddingTop: '2px', minWidth: '24px' }}>
+              0{i + 1}
+            </span>
+            <p className="text-headline" style={{ fontWeight: 340 }}>{item}</p>
           </div>
         ))}
       </div>

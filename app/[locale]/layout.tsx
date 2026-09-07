@@ -8,6 +8,12 @@ import '../globals.css';
 export const metadata: Metadata = {
   title: 'Beomjun Lee — Portfolio',
   description: 'Growth & Data-Driven Marketer',
+  icons: {
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+    ],
+  },
 };
 
 export default async function LocaleLayout({
@@ -18,16 +24,12 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-
-  if (!routing.locales.includes(locale as 'en' | 'ko' | 'zh')) {
-    notFound();
-  }
-
+  if (!routing.locales.includes(locale as 'en' | 'ko' | 'zh')) notFound();
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <body>
+      <body style={{ background: '#ffffff', minHeight: '100vh' }}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

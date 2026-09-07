@@ -6,14 +6,25 @@ export default function Highlights() {
   const items = t.raw('items') as { num: string; label: string }[];
 
   return (
-    <div className="flex border-t border-b border-gray-100 mx-10">
+    <div style={{
+      borderTop: '1px solid var(--color-hairline)',
+      borderBottom: '1px solid var(--color-hairline)',
+      display: 'flex',
+      maxWidth: '1280px',
+      margin: '0 auto',
+    }}>
       {items.map((item, i) => (
-        <div
-          key={i}
-          className={`flex-1 py-7 pl-8 ${i < items.length - 1 ? 'border-r border-gray-100' : ''}`}
-        >
-          <div className="font-serif text-3xl tracking-tight mb-1">{item.num}</div>
-          <div className="text-xs text-gray-400 tracking-wide">{item.label}</div>
+        <div key={i} style={{
+          flex: 1,
+          padding: '36px 40px',
+          borderRight: i < items.length - 1 ? '1px solid var(--color-hairline)' : 'none',
+        }}>
+          <div className="text-display-lg" style={{ fontSize: 'clamp(28px, 4vw, 52px)', marginBottom: '4px' }}>
+            {item.num}
+          </div>
+          <div className="text-caption" style={{ opacity: 0.5 }}>
+            {item.label}
+          </div>
         </div>
       ))}
     </div>
