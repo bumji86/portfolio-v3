@@ -7,15 +7,15 @@ import BrandCollaborations from '@/components/home/BrandCollaborations';
 import DiscoverByTag from '@/components/home/DiscoverByTag';
 import Closing from '@/components/home/Closing';
 import Footer from '@/components/home/Footer';
-import { ProjectModalProvider } from '@/components/home/ProjectModal';
+import { ModalProvider } from '@/components/home/ModalProvider';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   setRequestLocale((await params).locale);
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+      <ModalProvider>
       <Header />
-      <ProjectModalProvider>
       <main>
         <Hero />
         <KeyHighlights />
@@ -24,8 +24,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <DiscoverByTag />
         <Closing />
       </main>
-      </ProjectModalProvider>
       <Footer />
+      </ModalProvider>
     </div>
   );
 }

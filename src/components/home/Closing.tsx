@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Typewriter from './Typewriter';
+import ContactButton from './ContactButton';
 
 // scales the label only, so the button box keeps its size and the pair doesn't shift
 const growText = 'inline-block transition-transform duration-200 ease-out group-hover:scale-110 motion-reduce:transition-none';
@@ -24,12 +25,9 @@ export default function Closing() {
         >
           <span className={growText}>{t('resume')}</span>
         </Link>
-        <Link
-          href="/contact"
-          className="group rounded-full border border-white px-8 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-neutral-900"
-        >
+        <ContactButton className="group rounded-full border border-white px-8 py-3 text-sm font-medium transition-colors hover:bg-white hover:text-neutral-900">
           <span className={growText}>{t('contact')}</span>
-        </Link>
+        </ContactButton>
       </div>
     </section>
   );

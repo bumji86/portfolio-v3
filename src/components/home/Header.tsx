@@ -6,16 +6,21 @@ import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import { GlobeIcon } from './icons';
+import { useModal } from './modal-context';
+
+const navLink =
+  'text-sm text-neutral-800 transition-colors hover:text-neutral-400 dark:text-neutral-200 dark:hover:text-neutral-500';
 
 export default function Header() {
   const t = useTranslations('home.header');
   const locale = useLocale();
   const pathname = usePathname();
+  const { openContact } = useModal();
 
   const links = [
     { href: '/#works', label: t('works') },
     { href: '/resume', label: t('about') },
-    { href: '/contact', label: t('contact') },
+    { href: '/#contact', label: t('contact'), contact: true },
   ];
 
   return (
@@ -27,15 +32,17 @@ export default function Header() {
 
         <div className="flex items-center gap-2 sm:gap-6 md:gap-10">
           <nav className="hidden items-center gap-10 sm:flex">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-sm text-neutral-800 transition-colors hover:text-neutral-400 dark:text-neutral-200 dark:hover:text-neutral-500"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) =>
+              l.contact ? (
+                <button key={l.href} type="button" onClick={openContact} aria-haspopup="dialog" className={`cursor-pointer ${navLink}`}>
+                  {l.label}
+                </button>
+              ) : (
+                <Link key={l.href} href={l.href} className={navLink}>
+                  {l.label}
+                </Link>
+              ),
+            )}
           </nav>
 
           {routing.locales.length > 1 && (

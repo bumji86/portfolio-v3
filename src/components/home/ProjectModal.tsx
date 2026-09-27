@@ -1,6 +1,6 @@
 'use client';
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import Media from './Media';
+import { useModal } from './modal-context';
 
 // A reference slot at the bottom of the modal: image, self-hosted video, or an embed (e.g. YouTube).
 export type ProjectMedia =
@@ -22,70 +22,11 @@ const LOREM = [
   'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 ];
 
-const ModalContext = createContext<(project: Project) => void>(() => {});
-
-export function useOpenProject() {
-  return useContext(ModalContext);
-}
-
-// Provides `useOpenProject()` to the cards and renders the single shared <dialog>.
-// <dialog>.showModal() gives us the top layer, Escape-to-close and focus containment for free.
-export function ProjectModalProvider({ children }: { children: React.ReactNode }) {
-  const [project, setProject] = useState<Project | null>(null);
-  const dialog = useRef<HTMLDialogElement>(null);
-
-  useEffect(() => {
-    const d = dialog.current;
-    if (!d || !project) return;
-    d.showModal();
-    const root = document.documentElement;
-    const prev = root.style.overflow;
-    root.style.overflow = 'hidden';
-    return () => {
-      root.style.overflow = prev;
-    };
-  }, [project]);
-
-  const close = () => dialog.current?.close();
-
-  return (
-    <ModalContext value={setProject}>
-      {children}
-      <dialog
-        ref={dialog}
-        onClose={() => setProject(null)}
-        // a click that lands on the <dialog> itself (not its content) is a backdrop click
-        onClick={(e) => e.target === e.currentTarget && close()}
-        aria-labelledby="project-modal-title"
-        className="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-[960px] overflow-hidden rounded-[20px] bg-white p-0 text-neutral-900 shadow-2xl backdrop:bg-black/50 open:animate-modal-in motion-reduce:open:animate-none dark:bg-neutral-900 dark:text-neutral-100"
-      >
-        {project && (
-          <>
-            <button
-              type="button"
-              onClick={close}
-              aria-label="Close"
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white/90 text-neutral-800 shadow-sm backdrop-blur transition-colors hover:bg-neutral-100 md:top-5 md:right-5 dark:bg-neutral-800/90 dark:text-neutral-200 dark:hover:bg-neutral-700"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                <path d="M6 6l12 12M18 6L6 18" />
-              </svg>
-            </button>
-            <div className="max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain px-6 pt-10 pb-14 md:px-12 md:pt-12 md:pb-24">
-              <ProjectBody project={project} />
-            </div>
-          </>
-        )}
-      </dialog>
-    </ModalContext>
-  );
-}
-
-function ProjectBody({ project }: { project: Project }) {
+export function ProjectBody({ project }: { project: Project }) {
   const { title, image, desc, tags, body = LOREM, media = [null, null] } = project;
 
   return (
-    <article>
+    <article className="px-6 pt-10 pb-14 md:px-12 md:pt-12 md:pb-24">
       <h2 id="project-modal-title" className="pr-10 text-2xl font-bold tracking-tight md:text-[32px]">
         {title}
       </h2>
@@ -148,11 +89,11 @@ function ReferenceMedia({ media }: { media: ProjectMedia | null }) {
 
 // Stretched, invisible button that makes a whole card open the modal.
 export function OpenProjectButton({ project }: { project: Project }) {
-  const open = useOpenProject();
+  const { openProject } = useModal();
   return (
     <button
       type="button"
-      onClick={() => open(project)}
+      onClick={() => openProject(project)}
       aria-label={project.title}
       aria-haspopup="dialog"
       className="absolute inset-0 z-10 cursor-pointer rounded-[inherit] focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none focus-visible:ring-inset"

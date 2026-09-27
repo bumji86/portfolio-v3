@@ -443,6 +443,23 @@
       "resume": "이력서",
       "contact": "연락하기"
     },
+    "contact": {
+        "title": "연락하기",
+        "desc": "아래 폼이나 연락처로 편하게 연락 주세요.",
+        "email": "이메일",
+        "phone": "전화",
+        "kakao": "카카오톡",
+        "wechat": "위챗",
+        "name": "이름",
+        "namePh": "이름을 입력하세요",
+        "emailPh": "your@email.com",
+        "subject": "제목",
+        "subjectPh": "프로젝트 문의",
+        "message": "메시지",
+        "messagePh": "프로젝트에 대해 알려주세요...",
+        "send": "메시지 보내기",
+        "notConnected": "아직 폼이 연결되지 않았습니다 — {email}로 직접 메일 주세요."
+      },
     "footer": {
       "kakao": "카카오톡",
       "wechat": "위챗",

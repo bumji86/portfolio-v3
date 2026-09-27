@@ -368,6 +368,23 @@
       "resume": "Resume",
       "contact": "Contact"
     },
+    "contact": {
+        "title": "Contact",
+        "desc": "Feel free to reach out through the form or contact details below.",
+        "email": "Email",
+        "phone": "Phone",
+        "kakao": "Kakao",
+        "wechat": "Wechat",
+        "name": "Name",
+        "namePh": "Your name",
+        "emailPh": "your@email.com",
+        "subject": "Subject",
+        "subjectPh": "Project inquiry",
+        "message": "Message",
+        "messagePh": "Tell me about your project...",
+        "send": "Send Message",
+        "notConnected": "The form isn't connected yet — please email {email} directly."
+      },
     "footer": {
       "kakao": "Kakao",
       "wechat": "Wechat",

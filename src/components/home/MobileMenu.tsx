@@ -7,19 +7,24 @@ import { routing } from '@/i18n/routing';
 import { contact } from '@/content/home';
 import { GlobeIcon, LinkedInIcon } from './icons';
 import { setTheme } from './ThemeToggle';
+import { useModal } from './modal-context';
 
 // Every language the site is translated into; ones missing from routing.locales render disabled.
 const ALL_LOCALES = ['en', 'ko', 'zh'] as const;
 
 const subscribeNoop = () => () => {};
 
+const menuLink =
+  'block w-full py-2.5 text-2xl font-semibold tracking-tight text-neutral-900 transition-colors hover:text-neutral-400 dark:text-white dark:hover:text-neutral-500';
+
 // Hamburger (below `sm`) + right-side drawer. The drawer is portaled to <body> because the header's
 // backdrop-filter would otherwise trap `position: fixed` inside the header box.
-export default function MobileMenu({ links }: { links: { href: string; label: string }[] }) {
+export default function MobileMenu({ links }: { links: { href: string; label: string; contact?: boolean }[] }) {
   const t = useTranslations('home.header');
   const locale = useLocale();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { openContact } = useModal();
   const isClient = useSyncExternalStore(subscribeNoop, () => true, () => false);
   const trigger = useRef<HTMLButtonElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
@@ -89,13 +94,23 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
               <li key={l.href}>
-                <Link
-                  href={l.href}
-                  onClick={close}
-                  className="block py-2.5 text-2xl font-semibold tracking-tight text-neutral-900 transition-colors hover:text-neutral-400 dark:text-white dark:hover:text-neutral-500"
-                >
-                  {l.label}
-                </Link>
+                {l.contact ? (
+                  <button
+                    type="button"
+                    aria-haspopup="dialog"
+                    onClick={() => {
+                      close();
+                      openContact();
+                    }}
+                    className={`cursor-pointer text-left ${menuLink}`}
+                  >
+                    {l.label}
+                  </button>
+                ) : (
+                  <Link href={l.href} onClick={close} className={menuLink}>
+                    {l.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
