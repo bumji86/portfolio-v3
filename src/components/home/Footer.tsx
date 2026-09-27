@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { contact } from '@/content/home';
+import Logo from './Logo';
 
 export default function Footer() {
   const t = useTranslations('home.footer');
@@ -7,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-100 dark:bg-neutral-900">
       <div className="mx-auto max-w-[1440px] px-5 py-14 md:px-20 md:py-16">
-        <p className="font-logo text-2xl tracking-[0.06em]">LEE BEOMJUN</p>
+        <Logo className="h-[19px]" />
 
         <div className="mt-8 space-y-1 text-xs text-neutral-600 dark:text-neutral-400">
           <p>

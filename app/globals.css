@@ -58,10 +58,6 @@ html {
   font-family: var(--font-serif);
 }
 
-.font-logo {
-  font-family: var(--font-univers), 'Arial Narrow', sans-serif;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .animate-marquee,
