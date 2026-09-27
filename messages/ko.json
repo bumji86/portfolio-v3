@@ -330,7 +330,14 @@
       "contact": "연락처",
       "language": "언어",
       "lightMode": "라이트 모드로 전환",
-      "darkMode": "다크 모드로 전환"
+      "darkMode": "다크 모드로 전환",
+      "menu": "메뉴",
+      "openMenu": "메뉴 열기",
+      "closeMenu": "메뉴 닫기",
+      "languageSoon": "준비 중",
+      "theme": "테마",
+      "light": "라이트",
+      "dark": "다크"
     },
     "hero": {
       "title": [

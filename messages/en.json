@@ -255,7 +255,14 @@
       "contact": "Contact",
       "language": "Language",
       "lightMode": "Switch to light mode",
-      "darkMode": "Switch to dark mode"
+      "darkMode": "Switch to dark mode",
+      "menu": "Menu",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "languageSoon": "Coming soon",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark"
     },
     "hero": {
       "title": [

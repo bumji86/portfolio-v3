@@ -4,6 +4,8 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
+import MobileMenu from './MobileMenu';
+import { GlobeIcon } from './icons';
 
 export default function Header() {
   const t = useTranslations('home.header');
@@ -23,7 +25,7 @@ export default function Header() {
           <Logo className="h-[19px] md:h-[26px]" />
         </Link>
 
-        <div className="flex items-center gap-6 md:gap-10">
+        <div className="flex items-center gap-2 sm:gap-6 md:gap-10">
           <nav className="hidden items-center gap-10 sm:flex">
             {links.map((l) => (
               <Link
@@ -38,7 +40,7 @@ export default function Header() {
 
           {routing.locales.length > 1 && (
           <div className="flex items-center gap-1.5 text-xs" aria-label={t('language')}>
-            <GlobeIcon />
+            <GlobeIcon className="mr-0.5" />
             {routing.locales.map((l, i) => (
               <span key={l} className="flex items-center gap-1.5">
                 {i > 0 && <span className="text-neutral-300 dark:text-neutral-600">·</span>}
@@ -58,18 +60,10 @@ export default function Header() {
           </div>
           )}
 
-          <ThemeToggle labelLight={t('lightMode')} labelDark={t('darkMode')} />
+          <ThemeToggle labelLight={t('lightMode')} labelDark={t('darkMode')} className="hidden sm:flex" />
+          <MobileMenu links={links} />
         </div>
       </div>
     </header>
-  );
-}
-
-function GlobeIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden className="mr-0.5">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
   );
 }

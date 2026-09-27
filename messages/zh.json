@@ -331,7 +331,14 @@
       "contact": "联系",
       "language": "语言",
       "lightMode": "切换到浅色模式",
-      "darkMode": "切换到深色模式"
+      "darkMode": "切换到深色模式",
+      "menu": "菜单",
+      "openMenu": "打开菜单",
+      "closeMenu": "关闭菜单",
+      "languageSoon": "即将推出",
+      "theme": "主题",
+      "light": "浅色",
+      "dark": "深色"
     },
     "hero": {
       "title": [

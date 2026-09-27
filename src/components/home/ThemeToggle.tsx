@@ -2,19 +2,29 @@
 
 // The initial `dark` class is set before paint by the inline script in app/[locale]/layout.tsx,
 // so the icon is chosen purely with CSS (dark: variants) to avoid a hydration mismatch.
-export default function ThemeToggle({ labelLight, labelDark }: { labelLight: string; labelDark: string }) {
-  const toggle = () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    try {
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    } catch {}
-  };
+export function setTheme(mode: 'light' | 'dark') {
+  document.documentElement.classList.toggle('dark', mode === 'dark');
+  try {
+    localStorage.setItem('theme', mode);
+  } catch {}
+}
+
+export default function ThemeToggle({
+  labelLight,
+  labelDark,
+  className = '',
+}: {
+  labelLight: string;
+  labelDark: string;
+  className?: string;
+}) {
+  const toggle = () => setTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
 
   return (
     <button
       type="button"
       onClick={toggle}
-      className="flex h-8 w-8 items-center justify-center rounded-full text-neutral-800 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+      className={`h-8 w-8 items-center justify-center rounded-full text-neutral-800 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800 ${className}`}
     >
       <span className="sr-only dark:hidden">{labelDark}</span>
       <span className="sr-only hidden dark:inline">{labelLight}</span>
