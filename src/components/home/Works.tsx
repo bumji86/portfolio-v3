@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { works } from '@/content/home';
 import OverlayCard from './OverlayCard';
 
@@ -28,8 +27,8 @@ export default function Works() {
         ref={track}
         className="-mx-5 mt-10 flex snap-x snap-mandatory scroll-px-5 gap-5 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:mx-0 md:mt-14 md:gap-8 md:scroll-px-0 md:px-0 [&::-webkit-scrollbar]:hidden"
       >
-        {works.map(({ id, image, href }) => {
-          const card = (
+        {works.map(({ id, image }) => (
+          <div key={id} className="w-[60%] shrink-0 snap-start sm:w-[calc((100%-2*1.25rem)/3)] md:w-[calc((100%-4*2rem)/5)]">
             <OverlayCard
               image={image}
               title={t(`items.${id}.title`)}
@@ -38,18 +37,8 @@ export default function Works() {
               size="sm"
               className="aspect-[7/10] rounded-sm"
             />
-          );
-          const cls = 'w-[60%] shrink-0 snap-start sm:w-[calc((100%-2*1.25rem)/3)] md:w-[calc((100%-4*2rem)/5)]';
-          return href ? (
-            <Link key={id} href={href} className={cls}>
-              {card}
-            </Link>
-          ) : (
-            <article key={id} className={cls}>
-              {card}
-            </article>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

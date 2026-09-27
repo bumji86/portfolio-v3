@@ -26,6 +26,10 @@
   --animate-marquee-reverse: marquee 60s linear infinite reverse;
   --animate-blink: blink 1s step-end infinite;
   --animate-float: float 6s ease-in-out infinite;
+  --animate-modal-in: modal-in 0.25s ease-out;
+  @keyframes modal-in {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  }
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -58,7 +62,15 @@ html {
   font-family: var(--font-serif);
 }
 
+dialog[open]::backdrop {
+  animation: backdrop-in 0.25s ease-out;
+}
+@keyframes backdrop-in {
+  from { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  dialog[open]::backdrop { animation: none; }
   html { scroll-behavior: auto; }
   .animate-marquee,
   .animate-marquee-reverse,

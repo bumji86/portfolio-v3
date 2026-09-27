@@ -1,5 +1,6 @@
 import Media from './Media';
 import Tag from './Tag';
+import { OpenProjectButton } from './ProjectModal';
 
 type Props = {
   image: string | null;
@@ -13,7 +14,7 @@ type Props = {
 
 // Image card with the title laid over it. On hover (keyboard focus, or always on touch screens)
 // the image zooms and darkens top→bottom while the description and tags slide up.
-// `reveal:` is a custom variant defined in app/globals.css.
+// `reveal:` is a custom variant defined in app/globals.css. Clicking the card opens the project modal.
 export default function OverlayCard({ image, title, desc, tags, sizes, size = 'lg', className = '' }: Props) {
   const lg = size === 'lg';
 
@@ -53,6 +54,8 @@ export default function OverlayCard({ image, title, desc, tags, sizes, size = 'l
           </div>
         </div>
       </div>
+
+      <OpenProjectButton project={{ title, image, desc, tags }} />
     </div>
   );
 }

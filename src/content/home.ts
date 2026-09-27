@@ -17,13 +17,12 @@ export const highlights: { id: 'aiLevelUp' | 'gmvGrowth' | 'promotions'; image: 
 export const works: {
   id: 'cobranding' | 'groupDeal' | 'dataViz' | 'offlineEvents' | 'contentProduction';
   image: string | null;
-  href: string | null; // path without locale, e.g. '/cases/itsub-crisis'
 }[] = [
-  { id: 'cobranding', image: '/images/works/cobranding.jpg', href: null },
-  { id: 'groupDeal', image: '/images/works/group-deal.jpg', href: null },
-  { id: 'dataViz', image: '/images/works/data-viz.jpg', href: null },
-  { id: 'offlineEvents', image: '/images/works/offline-events.jpg', href: null },
-  { id: 'contentProduction', image: '/images/works/content-production.jpg', href: null },
+  { id: 'cobranding', image: '/images/works/cobranding.jpg' },
+  { id: 'groupDeal', image: '/images/works/group-deal.jpg' },
+  { id: 'dataViz', image: '/images/works/data-viz.jpg' },
+  { id: 'offlineEvents', image: '/images/works/offline-events.jpg' },
+  { id: 'contentProduction', image: '/images/works/content-production.jpg' },
 ];
 
 export const brands: { name: string; logo: string | null }[] = [
