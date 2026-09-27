@@ -1,23 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap');
+/* Class-based dark mode, toggled on <html> by ThemeToggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Card detail reveal: hover on mouse devices, keyboard focus inside the card,
+   and always-on for touch screens (no hover there). Used by OverlayCard. */
+@custom-variant reveal {
+  @media (hover: hover) {
+    &:is(:where(.group):hover *) {
+      @slot;
+    }
+  }
+  &:is(:where(.group):focus-within *),
+  &:is(:where(a:focus-visible) *) {
+    @slot;
+  }
+  @media (hover: none) {
+    @slot;
+  }
+}
+
+@theme {
+  --animate-marquee: marquee 60s linear infinite;
+  --animate-marquee-reverse: marquee 60s linear infinite reverse;
+  --animate-blink: blink 1s step-end infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
 
 :root {
   --font-serif: 'DM Serif Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  /* Pretendard has no Simplified Chinese glyphs, so zh falls back to the system CJK font */
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+.dark { color-scheme: dark; }
 
 html {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 .font-serif {
   font-family: var(--font-serif);
+}
+
+.font-logo {
+  font-family: var(--font-univers), 'Arial Narrow', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-blink,
+  .animate-float { animation: none; }
 }

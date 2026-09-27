@@ -2,8 +2,9 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
-const locales = ['en', 'ko', 'zh'] as const;
+const { locales } = routing;
 
 export default function Nav() {
   const t = useTranslations('nav');
@@ -36,7 +37,7 @@ export default function Nav() {
         </Link>
       </div>
       <div className="flex gap-3">
-        {locales.map((l) => (
+        {locales.length > 1 && locales.map((l) => (
           <Link
             key={l}
             href={getLocalePath(l)}

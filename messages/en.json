@@ -247,5 +247,124 @@
       { "lang": "Chinese", "level": "Business Proficient" },
       { "lang": "English", "level": "Conversational" }
     ]
+  },
+  "home": {
+    "header": {
+      "works": "Works",
+      "about": "About",
+      "contact": "Contact",
+      "language": "Language",
+      "lightMode": "Switch to light mode",
+      "darkMode": "Switch to dark mode"
+    },
+    "hero": {
+      "title": [
+        "Finding",
+        "Kosmos..."
+      ],
+      "subtitle": "Influencer · Commerce · Data"
+    },
+    "highlights": {
+      "title": "Key Highlights",
+      "items": {
+        "aiLevelUp": {
+          "title": "AI Level-up Project",
+          "desc": "Led the in-house AI-native environment build-out",
+          "tags": [
+            "Practical Tooling",
+            "Upskilling"
+          ]
+        },
+        "gmvGrowth": {
+          "title": "211% YoY Growth",
+          "desc": "+211% YoY GMV growth via influencer marketing",
+          "tags": [
+            "Growth",
+            "Influencer Marketing"
+          ]
+        },
+        "promotions": {
+          "title": "Promotional Campaigns",
+          "desc": "Ran promotional campaigns across 900+ items",
+          "tags": [
+            "Campaigns",
+            "Operation"
+          ]
+        }
+      }
+    },
+    "works": {
+      "title": "Works",
+      "prev": "Previous",
+      "next": "Next",
+      "items": {
+        "cobranding": {
+          "title": "Co-branding Project",
+          "tags": [
+            "Risk Management"
+          ]
+        },
+        "groupDeal": {
+          "title": "New Discount Format",
+          "tags": [
+            "Cross-functional Communication"
+          ]
+        },
+        "dataViz": {
+          "title": "Data Visualization",
+          "tags": [
+            "Data",
+            "Insights"
+          ]
+        },
+        "offlineEvents": {
+          "title": "Offline Events",
+          "tags": [
+            "Events",
+            "Branding"
+          ]
+        },
+        "contentProduction": {
+          "title": "Content Production",
+          "tags": [
+            "Creative",
+            "Media"
+          ]
+        }
+      }
+    },
+    "brands": {
+      "title": "Brand Collaborations"
+    },
+    "tags": {
+      "title": "Discover by Tag",
+      "row1": [
+        "Influencer Marketing",
+        "Data Driven",
+        "Crossfunctional Communication",
+        "Risk Management",
+        "Problem Solving",
+        "Critical Thinking"
+      ],
+      "row2": [
+        "Data Analysis",
+        "Root Causes",
+        "Content Production",
+        "AI Native",
+        "Problem Solving",
+        "Risk Management"
+      ]
+    },
+    "closing": {
+      "line1": "Every outcome has a cause,",
+      "line2": "and my job is to find it.",
+      "resume": "Resume",
+      "contact": "Contact"
+    },
+    "footer": {
+      "kakao": "Kakao",
+      "wechat": "Wechat",
+      "copyright": "© Lee Beomjun, 2026"
+    }
   }
 }

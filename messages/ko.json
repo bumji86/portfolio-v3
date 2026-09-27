@@ -322,5 +322,124 @@
         "label": "적은 팔로워로 GMV 최대화"
       }
     ]
+  },
+  "home": {
+    "header": {
+      "works": "프로젝트",
+      "about": "소개",
+      "contact": "연락처",
+      "language": "언어",
+      "lightMode": "라이트 모드로 전환",
+      "darkMode": "다크 모드로 전환"
+    },
+    "hero": {
+      "title": [
+        "Finding",
+        "Kosmos..."
+      ],
+      "subtitle": "인플루언서 · 커머스 · 데이터"
+    },
+    "highlights": {
+      "title": "주요 성과",
+      "items": {
+        "aiLevelUp": {
+          "title": "AI 레벨업 프로젝트",
+          "desc": "사내 AI 네이티브 환경 구축 주도",
+          "tags": [
+            "실무 툴링",
+            "업스킬링"
+          ]
+        },
+        "gmvGrowth": {
+          "title": "전년 대비 211% 성장",
+          "desc": "인플루언서 마케팅으로 GMV 전년 대비 211% 성장",
+          "tags": [
+            "성장",
+            "인플루언서 마케팅"
+          ]
+        },
+        "promotions": {
+          "title": "프로모션 캠페인",
+          "desc": "900개 이상 상품 대상 프로모션 캠페인 운영",
+          "tags": [
+            "캠페인",
+            "운영"
+          ]
+        }
+      }
+    },
+    "works": {
+      "title": "프로젝트",
+      "prev": "이전",
+      "next": "다음",
+      "items": {
+        "cobranding": {
+          "title": "코브랜딩 프로젝트",
+          "tags": [
+            "리스크 관리"
+          ]
+        },
+        "groupDeal": {
+          "title": "신규 할인 포맷",
+          "tags": [
+            "협업 커뮤니케이션"
+          ]
+        },
+        "dataViz": {
+          "title": "데이터 시각화",
+          "tags": [
+            "데이터",
+            "인사이트"
+          ]
+        },
+        "offlineEvents": {
+          "title": "오프라인 이벤트",
+          "tags": [
+            "이벤트",
+            "브랜딩"
+          ]
+        },
+        "contentProduction": {
+          "title": "콘텐츠 제작",
+          "tags": [
+            "크리에이티브",
+            "미디어"
+          ]
+        }
+      }
+    },
+    "brands": {
+      "title": "브랜드 협업"
+    },
+    "tags": {
+      "title": "태그로 살펴보기",
+      "row1": [
+        "인플루언서 마케팅",
+        "데이터 드리븐",
+        "협업 커뮤니케이션",
+        "리스크 관리",
+        "문제 해결",
+        "비판적 사고"
+      ],
+      "row2": [
+        "데이터 분석",
+        "근본 원인",
+        "콘텐츠 제작",
+        "AI 네이티브",
+        "문제 해결",
+        "리스크 관리"
+      ]
+    },
+    "closing": {
+      "line1": "모든 결과에는 원인이 있고,",
+      "line2": "그 원인을 찾는 것이 제 일입니다.",
+      "resume": "이력서",
+      "contact": "연락하기"
+    },
+    "footer": {
+      "kakao": "카카오톡",
+      "wechat": "위챗",
+      "copyright": "© Lee Beomjun, 2026"
+    }
   }
 }

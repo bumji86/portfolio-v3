@@ -1,22 +1,28 @@
-import { useTranslations } from 'next-intl';
-import Nav from '@/components/layout/Nav';
-import Hero from '@/components/sections/Hero';
-import Highlights from '@/components/sections/Highlights';
-import WhenYouNeedMe from '@/components/sections/WhenYouNeedMe';
-import CasesPreview from '@/components/sections/CasesPreview';
-import BeyondDesk from '@/components/sections/BeyondDesk';
-import Contact from '@/components/sections/Contact';
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/home/Header';
+import Hero from '@/components/home/Hero';
+import KeyHighlights from '@/components/home/KeyHighlights';
+import Works from '@/components/home/Works';
+import BrandCollaborations from '@/components/home/BrandCollaborations';
+import DiscoverByTag from '@/components/home/DiscoverByTag';
+import Closing from '@/components/home/Closing';
+import Footer from '@/components/home/Footer';
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  setRequestLocale((await params).locale);
+
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Highlights />
-      <WhenYouNeedMe />
-      <CasesPreview />
-      <BeyondDesk />
-      <Contact />
-    </main>
+    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
+      <Header />
+      <main>
+        <Hero />
+        <KeyHighlights />
+        <Works />
+        <BrandCollaborations />
+        <DiscoverByTag />
+        <Closing />
+      </main>
+      <Footer />
+    </div>
   );
 }
