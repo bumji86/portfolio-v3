@@ -29,7 +29,10 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
-  const messages = await getMessages();
+  // Client components only need these namespaces; the rest stays on the server
+  // (the legacy `contact` namespace holds an email/LinkedIn the blind page must not ship).
+  const { home, cv } = await getMessages();
+  const messages = { home, cv };
 
   return (
     <html lang={locale} suppressHydrationWarning>

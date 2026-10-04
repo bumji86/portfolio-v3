@@ -1,14 +1,14 @@
 'use client';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { contact } from '@/content/home';
+import type { ContactInfo } from '@/content/contact';
 
 const field =
   'w-full rounded-lg border border-neutral-200 bg-neutral-50 px-4 text-[15px] text-neutral-900 placeholder:text-neutral-400 transition-colors focus:border-neutral-900 focus:bg-white focus:outline-none dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500 dark:focus:border-neutral-300 dark:focus:bg-neutral-900';
 
 // Contact modal body: intro + details on the left, message form on the right (stacked on mobile).
 // The form is a mockup for now — submitting shows a notice instead of sending (no mail backend yet).
-export default function ContactPanel() {
+export default function ContactPanel({ contact }: { contact: ContactInfo }) {
   const t = useTranslations('home.contact');
   const [notice, setNotice] = useState(false);
 

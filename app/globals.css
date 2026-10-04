@@ -58,6 +58,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Korean wraps between words (eojeol), not mid-word */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
@@ -67,6 +73,14 @@ dialog[open]::backdrop {
 }
 @keyframes backdrop-in {
   from { opacity: 0; }
+}
+
+/* Résumé PDF / print (see app/[locale]/resume and scripts/resume-pdf.mjs) */
+@media print {
+  @page {
+    size: A4;
+    margin: 13mm 14mm;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

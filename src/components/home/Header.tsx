@@ -11,22 +11,29 @@ import { useModal } from './modal-context';
 const navLink =
   'text-sm text-neutral-800 transition-colors hover:text-neutral-400 dark:text-neutral-200 dark:hover:text-neutral-500';
 
-export default function Header() {
+// `blindBase` (e.g. "/p/<key>"): no-contact version — no Contact, and every link stays under the secret path.
+export default function Header({ blindBase = null, linkedin }: { blindBase?: string | null; linkedin: string | null }) {
   const t = useTranslations('home.header');
   const locale = useLocale();
   const pathname = usePathname();
   const { openContact } = useModal();
 
-  const links = [
-    { href: '/#works', label: t('works') },
-    { href: '/resume', label: t('about') },
-    { href: '/#contact', label: t('contact'), contact: true },
-  ];
+  const home = blindBase ?? '/';
+  const links = blindBase
+    ? [
+        { href: `${blindBase}#works`, label: t('works') },
+        { href: `${blindBase}/about`, label: t('about') },
+      ]
+    : [
+        { href: '/#works', label: t('works') },
+        { href: '/about', label: t('about') },
+        { href: '/#contact', label: t('contact'), contact: true },
+      ];
 
   return (
     <header className="sticky top-[env(safe-area-inset-top,0px)] z-50 border-b border-neutral-200 bg-white/95 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:h-20 md:px-20">
-        <Link href="/" aria-label="LEE BEOMJUN — home">
+        <Link href={home} aria-label="LEE BEOMJUN — home">
           <Logo className="h-[19px] md:h-[26px]" />
         </Link>
 
@@ -38,7 +45,12 @@ export default function Header() {
                   {l.label}
                 </button>
               ) : (
-                <Link key={l.href} href={l.href} className={navLink}>
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  aria-current={pathname === l.href ? 'page' : undefined}
+                  className={`${navLink} aria-[current=page]:font-semibold aria-[current=page]:text-neutral-900 aria-[current=page]:underline aria-[current=page]:decoration-1 aria-[current=page]:underline-offset-[10px] dark:aria-[current=page]:text-white`}
+                >
                   {l.label}
                 </Link>
               ),
@@ -46,7 +58,7 @@ export default function Header() {
           </nav>
 
           {routing.locales.length > 1 && (
-          <div className="flex items-center gap-1.5 text-xs" aria-label={t('language')}>
+          <div className="hidden items-center gap-1.5 text-xs sm:flex" aria-label={t('language')}>
             <GlobeIcon className="mr-0.5" />
             {routing.locales.map((l, i) => (
               <span key={l} className="flex items-center gap-1.5">
@@ -68,7 +80,7 @@ export default function Header() {
           )}
 
           <ThemeToggle labelLight={t('lightMode')} labelDark={t('darkMode')} className="hidden sm:flex" />
-          <MobileMenu links={links} />
+          <MobileMenu links={links} linkedin={linkedin} />
         </div>
       </div>
     </header>

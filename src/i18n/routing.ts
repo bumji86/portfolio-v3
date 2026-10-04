@@ -1,8 +1,16 @@
 import { defineRouting } from 'next-intl/routing';
 
+const ALL = ['en', 'ko', 'zh'] as const;
+type Locale = (typeof ALL)[number];
+
+// Enabled locales: en + ko are live. zh is parked until it's ready (messages/zh.json is kept);
+// NEXT_PUBLIC_LOCALES (e.g. "en,ko,zh" in .env.local) can override this for local previews.
+const enabled = (process.env.NEXT_PUBLIC_LOCALES ?? 'en,ko')
+  .split(',')
+  .map((l) => l.trim())
+  .filter((l): l is Locale => (ALL as readonly string[]).includes(l));
+
 export const routing = defineRouting({
-  // Temporary en-only release: ko/zh are hidden (their routes 404 and the language toggle is hidden).
-  // To bring them back, restore ['en', 'ko', 'zh'] — messages/ko.json and zh.json are kept.
-  locales: ['en'],
+  locales: enabled.length ? enabled : ['en'],
   defaultLocale: 'en',
 });

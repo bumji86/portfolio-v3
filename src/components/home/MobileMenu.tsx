@@ -4,13 +4,9 @@ import { createPortal } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
-import { contact } from '@/content/home';
 import { GlobeIcon, LinkedInIcon } from './icons';
 import { setTheme } from './ThemeToggle';
 import { useModal } from './modal-context';
-
-// Every language the site is translated into; ones missing from routing.locales render disabled.
-const ALL_LOCALES = ['en', 'ko', 'zh'] as const;
 
 const subscribeNoop = () => () => {};
 
@@ -19,7 +15,13 @@ const menuLink =
 
 // Hamburger (below `sm`) + right-side drawer. The drawer is portaled to <body> because the header's
 // backdrop-filter would otherwise trap `position: fixed` inside the header box.
-export default function MobileMenu({ links }: { links: { href: string; label: string; contact?: boolean }[] }) {
+export default function MobileMenu({
+  links,
+  linkedin,
+}: {
+  links: { href: string; label: string; contact?: boolean }[];
+  linkedin: string | null;
+}) {
   const t = useTranslations('home.header');
   const locale = useLocale();
   const pathname = usePathname();
@@ -107,7 +109,7 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
                     {l.label}
                   </button>
                 ) : (
-                  <Link href={l.href} onClick={close} className={menuLink}>
+                  <Link href={l.href} onClick={close} aria-current={pathname === l.href ? 'page' : undefined} className={`${menuLink} aria-[current=page]:underline aria-[current=page]:decoration-2 aria-[current=page]:underline-offset-8`}>
                     {l.label}
                   </Link>
                 )}
@@ -124,13 +126,12 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
             {t('language')}
           </p>
           <ul className="mt-3 flex gap-2">
-            {ALL_LOCALES.map((l) => {
-              const enabled = (routing.locales as readonly string[]).includes(l);
+            {routing.locales.map((l) => {
               const current = l === locale;
               const base = 'flex h-9 min-w-12 items-center justify-center rounded-full border px-3 text-xs font-medium';
               return (
                 <li key={l}>
-                  {enabled && !current ? (
+                  {!current ? (
                     <Link
                       href={pathname}
                       locale={l}
@@ -143,13 +144,8 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
                     <button
                       type="button"
                       disabled
-                      aria-current={current ? 'true' : undefined}
-                      title={current ? undefined : t('languageSoon')}
-                      className={`${base} ${
-                        current
-                          ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900'
-                          : 'cursor-not-allowed border-neutral-200 text-neutral-300 dark:border-neutral-800 dark:text-neutral-600'
-                      }`}
+                      aria-current="true"
+                      className={`${base} border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900`}
                     >
                       {l.toUpperCase()}
                     </button>
@@ -179,9 +175,10 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
           </div>
         </div>
 
+        {linkedin && (
         <div className="mt-auto px-8 pb-8">
           <a
-            href={contact.linkedin}
+            href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -190,6 +187,7 @@ export default function MobileMenu({ links }: { links: { href: string; label: st
             <LinkedInIcon size={18} />
           </a>
         </div>
+        )}
       </aside>
     </div>
   );

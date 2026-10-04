@@ -308,37 +308,102 @@
         "cobranding": {
           "title": "Co-branding Project",
           "tags": [
-            "Risk Management"
+            "Risk Management",
+            "Partnerships",
+            "Crisis Response"
+          ],
+          "summary": "Led a 3-way co-branded group deal with Intel and a 2.8M-subscriber creator, reaching $1.2M+ GMV.",
+          "body": [
+            "In June 2025, AliExpress ran a co-branded group-buying campaign with Intel and tech creator Itsub (2.8M subscribers), bundling Intel-powered products into a limited-time group deal across three parties.",
+            "As the Korea-side PM, I owned cross-team alignment — coordinating Legal, Risk, CS, and Dev for about a month ahead of launch to pre-empt compliance and settlement issues that a three-party deal inevitably raises.",
+            "The campaign reached $1.2M+ GMV. When a full-order cancellation incident hit mid-campaign, I took direct ownership of communication across all parties and resolved it within 18 hours, keeping the partnership and customer trust intact. The lesson: in multi-party deals, the risk isn’t the plan — it’s the gap between teams, and closing that gap early is the real job."
           ]
         },
         "groupDeal": {
           "title": "New Discount Format",
           "tags": [
-            "Cross-functional Communication"
+            "Cross-functional Communication",
+            "Product",
+            "Localization"
+          ],
+          "summary": "Built a new in-app group-buying discount format, bridging Hangzhou HQ and the Seoul office.",
+          "body": [
+            "AliExpress set out to launch a new in-app discount mechanic — a group-deal format — tailored for the Korean market. The feature had to be specced in Hangzhou but make sense for Korean buyers and operations.",
+            "Over roughly two months of PM work, I acted as the bridge between the Hangzhou promotion and MD teams and the Seoul operators — translating local requirements into product specs, aligning both sides on scope, and coordinating development through launch.",
+            "The format shipped as a new way for Korean users to buy together at a discount. The takeaway was that a feature built across borders lives or dies on whether one person keeps both sides speaking the same language."
           ]
         },
         "dataViz": {
           "title": "Data Visualization",
           "tags": [
             "Data",
-            "Insights"
+            "Insights",
+            "Dashboard"
+          ],
+          "summary": "Turned promotion data scattered across spreadsheets into a single self-built dashboard.",
+          "body": [
+            "Promotion performance data lived in dozens of individual Excel files, each owned by a different person. Reviewing how a campaign actually performed meant manually stitching files together every time — slow, error-prone, and impossible to compare at a glance.",
+            "I designed and built a dashboard to fix the root cause rather than the symptom: a repeatable flow of gather → clean and standardize → visualize, so the same numbers landed in one shared view.",
+            "The result was that campaign results became readable in one place instead of a folder of spreadsheets, and the team could compare across promotions without rebuilding the data each time. The lesson: most “data problems” are really format problems — standardize the input and the insight follows."
           ]
         },
         "offlineEvents": {
           "title": "Offline Events",
           "tags": [
             "Events",
-            "Branding"
+            "Branding",
+            "Global"
+          ],
+          "summary": "Supported global offline activations, from Paris 2024 to an 11.11 creator event at Hangzhou HQ.",
+          "body": [
+            "Beyond day-to-day operations, I supported AliExpress’s large-scale offline moments — including on-site activity around the 2024 Paris Olympics and a Singles’ Day (11.11) commemorative event that invited Korean creators to the Hangzhou headquarters.",
+            "My role was to connect the Korea side to these events — coordinating creators, aligning logistics with HQ, and making sure the on-the-ground experience matched the campaign’s intent.",
+            "These events turned online partnerships into real relationships, giving creators and the brand a shared memory that carried back into the next campaign."
           ]
         },
         "contentProduction": {
           "title": "Content Production",
           "tags": [
             "Creative",
-            "Media"
+            "Media",
+            "AI"
+          ],
+          "summary": "Produced AI-native content for the AliExpress Korea channel and led internal AI upskilling.",
+          "body": [
+            "After the original influencer team was restructured, I moved into AI content operations — producing short-form video (YouTube Shorts) for the AliExpress Korea channel and building an in-house, AI-native production workflow from the ground up.",
+            "I didn’t stop at making content. Through an internal program I called “AI Level Up,” I ran hands-on sessions teaching colleagues to build practical tools (such as a custom crawler) and to embed an AI-powered chatbot into our team messenger — turning AI from a buzzword into something the team actually used.",
+            "The outcome was a repeatable content pipeline and a team that could build with AI rather than wait for it. The thread tying it together: I like finding the system beneath the work, then handing that system to the people around me."
+          ]
+        },
+        "aiTools": {
+          "title": "Tools I Built with AI",
+          "tags": [
+            "AI-Assisted Building",
+            "Marketing Ops",
+            "Market Signals",
+            "Automation"
+          ],
+          "summary": "Three work tools I built with AI coding assistants as a non-developer — each one starting from the decision it needed to support, not from the technology.",
+          "body": [
+            "I use AI coding assistants to turn recurring workflow problems into practical tools. Each project starts with a clear question: what information would improve the decision, and which steps can be automated reliably?"
+          ],
+          "tools": [
+            {
+              "name": "Reimbursement Submit Assistant",
+              "desc": "Built a browser extension to address recurring errors in overseas expense reporting, including missing card fees, duplicate records and inconsistent categorization. It processes six receipt formats locally, reconciles charges and applies team-specific rules. Ambiguous cases and final submission remain with the user."
+            },
+            {
+              "name": "Hotdeal Monitor",
+              "desc": "Built a cross-platform dashboard to surface purchase-interest signals from Korean deal communities. Updated every two hours, it organizes posts into individual product cards for easier comparison across retailers. Unreadable fields remain blank to prevent uncertain data from becoming misleading information."
+            },
+            {
+              "name": "YouTube Trend Radar",
+              "desc": "Built a topic-discovery dashboard that prioritizes recent view growth over cumulative popularity. It distinguishes emerging topics from isolated viral hits and flags data gaps that could distort interpretation. Designed around YouTube API requirements and deployed on a home server, it now supports weekly content planning."
+            }
           ]
         }
-      }
+      },
+      "visit": "Visit site"
     },
     "brands": {
       "title": "Brand Collaborations"
@@ -369,26 +434,219 @@
       "contact": "Contact"
     },
     "contact": {
-        "title": "Contact",
-        "desc": "Feel free to reach out through the form or contact details below.",
-        "email": "Email",
-        "phone": "Phone",
-        "kakao": "Kakao",
-        "wechat": "Wechat",
-        "name": "Name",
-        "namePh": "Your name",
-        "emailPh": "your@email.com",
-        "subject": "Subject",
-        "subjectPh": "Project inquiry",
-        "message": "Message",
-        "messagePh": "Tell me about your project...",
-        "send": "Send Message",
-        "notConnected": "The form isn't connected yet — please email {email} directly."
-      },
+      "title": "Contact",
+      "desc": "Feel free to reach out through the form or contact details below.",
+      "email": "Email",
+      "phone": "Phone",
+      "kakao": "Kakao",
+      "wechat": "Wechat",
+      "name": "Name",
+      "namePh": "Your name",
+      "emailPh": "your@email.com",
+      "subject": "Subject",
+      "subjectPh": "Project inquiry",
+      "message": "Message",
+      "messagePh": "Tell me about your project...",
+      "send": "Send Message",
+      "notConnected": "The form isn't connected yet — please email {email} directly."
+    },
     "footer": {
       "kakao": "Kakao",
       "wechat": "Wechat",
       "copyright": "© Lee Beomjun, 2026"
+    }
+  },
+  "about": {
+    "nav": {
+      "label": "Sections"
+    },
+    "hero": {
+      "title": "About.",
+      "tagline": "Influencer · Commerce · Data",
+      "name": "LEE BEOMJUN",
+      "intro": "A marketer spanning influencer marketing and commerce promotions, leading end-to-end from planning large-scale promotions to execution and feature improvements. I build predictable performance structures through data-driven decisions.",
+      "label": "PROFILE / RÉSUMÉ DRAFT"
+    },
+    "sections": {
+      "career": {
+        "title": "Career",
+        "sub": "",
+        "cols": [
+          "Period",
+          "Organization · Role · Details"
+        ],
+        "items": [
+          {
+            "period": "2024.01 – Present",
+            "org": "AliExpress Korea",
+            "role": "Marketing Manager · Current",
+            "groups": [
+              {
+                "heading": "Influencer Marketing & Commerce Promotions",
+                "bullets": [
+                  "Planned and ran influencer-driven group-buying promotions across cross-border and domestic markets",
+                  "Reached ~US$5.5M in annual cross-border GMV, onboarded 4 new key channels, and hit a 10% best-seller rate",
+                  "Ran domestic promotions end-to-end — 900+ campaigns contributing ~US$11.7M in direct and indirect results",
+                  "Discovered and grew new influencers through data-driven product selection and channel matching",
+                  "PM for two S-tier promotions a year (100+ influencers each) and monthly A+ tier campaigns"
+                ]
+              },
+              {
+                "heading": "Domestic Promotion Planning & Operations",
+                "bullets": [
+                  "Contributed to planning and launching the “Group Deal” feature",
+                  "Owned local group-buying promotions for two years — planning, operations, and performance management",
+                  "Built and streamlined promotion workflows with partner teams"
+                ]
+              },
+              {
+                "heading": "Data Analysis & Performance Management",
+                "bullets": [
+                  "Built a process to consolidate and clean influencer campaign data",
+                  "Designed and built a KPI-based performance dashboard",
+                  "Supported decisions and improved efficiency by visualizing campaign performance and trends"
+                ]
+              }
+            ]
+          },
+          {
+            "period": "2020.02 – 2023.12",
+            "org": "Semicolon Studio (SNOW)",
+            "role": "Marketing Manager · PD",
+            "groups": [
+              {
+                "heading": "Influencer Marketing",
+                "bullets": [
+                  "Planned and ran 5+ drama/film promotion campaigns a month on average",
+                  "Drove 36.5M cumulative views across digital campaigns"
+                ]
+              },
+              {
+                "heading": "Content Planning & Production (YouTube)",
+                "bullets": [
+                  "Joined <PIXID> as an early member, leading content strategy and production",
+                  "Early content reached 25M cumulative views"
+                ]
+              },
+              {
+                "heading": "Commercial Film Production",
+                "bullets": [
+                  "Worked on the film <Dr. Cheon and the Lost Talisman>",
+                  "Contributed to script review and post-production (1.91M admissions)"
+                ]
+              }
+            ]
+          },
+          {
+            "period": "2018.12 – 2020.01",
+            "org": "CJ ENM DIA TV",
+            "role": "Influencer Manager · Freelance",
+            "groups": [
+              {
+                "heading": "Recruited and managed Greater China influencers",
+                "bullets": [
+                  "Ran YouTube channels and planned/produced original content",
+                  "Supported remote collaboration between Korean and Chinese creators"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "sub": "",
+        "cols": [
+          "Period",
+          "School · Major · Degree"
+        ],
+        "items": [
+          {
+            "period": "2010.09 – 2016.07",
+            "org": "Tsinghua University (清华大学)",
+            "role": "Journalism and Communication · Bachelor's degree"
+          }
+        ]
+      },
+      "awards": {
+        "title": "Awards",
+        "sub": "",
+        "cols": [
+          "Date",
+          "Award · Organizer · Category"
+        ],
+        "items": [
+          {
+            "period": "2015.12",
+            "org": "National Security 111-Second Film Festival",
+            "role": "National Intelligence Service · Gold Prize",
+            "desc": "Entered the 1st National Security 111-Second Film Festival and handled overall video production in a two-person team."
+          }
+        ]
+      },
+      "activities": {
+        "title": "Activities",
+        "sub": "",
+        "cols": [
+          "Period",
+          "Activity · Organization · Role"
+        ],
+        "items": [
+          {
+            "period": "2017.09",
+            "org": "Newspaper Op-ed",
+            "role": "The Chosun Ilbo · Opinion",
+            "desc": "Submitted an analysis built on a root-cause framework to several newspapers; it ran as a column in The Chosun Ilbo’s opinion section on September 19, 2017.",
+            "linkLabel": "Read the column"
+          }
+        ]
+      },
+      "military": {
+        "title": "Military service",
+        "sub": "",
+        "cols": [
+          "Period",
+          "Branch · Service · Discharge"
+        ],
+        "items": [
+          {
+            "period": "2013.10 – 2015.07",
+            "org": "Republic of Korea Army · Active duty",
+            "role": "Honorably discharged"
+          }
+        ]
+      }
+    }
+  },
+  "cv": {
+    "title": "Résumé",
+    "role": "Marketing Manager",
+    "downloadPdf": "Download PDF",
+    "keyResults": {
+      "title": "Key Results",
+      "sub": "",
+      "items": [
+        {
+          "value": "+211%",
+          "label": "YoY GMV growth driven by influencer marketing"
+        },
+        {
+          "value": "900+",
+          "label": "Domestic campaigns run end-to-end, contributing ~US$11.7M in direct and indirect results"
+        },
+        {
+          "value": "US$5.5M",
+          "label": "Annual cross-border GMV, with 4 new key channels and a 10% best-seller rate"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Selected Projects",
+      "sub": ""
+    },
+    "skills": {
+      "title": "Skills",
+      "sub": ""
     }
   }
 }

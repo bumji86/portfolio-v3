@@ -1,6 +1,6 @@
 import Media from './Media';
 import Tag from './Tag';
-import { OpenProjectButton } from './ProjectModal';
+import { OpenProjectButton, type Project } from './ProjectModal';
 
 type Props = {
   image: string | null;
@@ -10,12 +10,14 @@ type Props = {
   sizes: string;
   size?: 'lg' | 'sm';
   className?: string; // sizing/aspect of the card box
+  modal?: Partial<Project>; // modal content; omit to make the card non-clickable (hover reveal only)
+  fit?: 'contain'; // show the whole image on a dark ground instead of cropping
 };
 
 // Image card with the title laid over it. On hover (keyboard focus, or always on touch screens)
 // the image zooms and darkens top→bottom while the description and tags slide up.
-// `reveal:` is a custom variant defined in app/globals.css. Clicking the card opens the project modal.
-export default function OverlayCard({ image, title, desc, tags, sizes, size = 'lg', className = '' }: Props) {
+// `reveal:` is a custom variant defined in app/globals.css. Cards with `modal` open the project modal on click.
+export default function OverlayCard({ image, title, desc, tags, sizes, size = 'lg', className = '', modal, fit }: Props) {
   const lg = size === 'lg';
 
   return (
@@ -24,8 +26,8 @@ export default function OverlayCard({ image, title, desc, tags, sizes, size = 'l
         src={image}
         alt={title}
         sizes={sizes}
-        className="h-full w-full"
-        imgClassName="transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
+        className={`h-full w-full ${fit === 'contain' ? 'bg-neutral-950' : ''}`}
+        imgClassName={`${fit === 'contain' ? 'object-contain!' : ''} transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none`}
       />
 
       {/* light base scrim so the title reads on bright images */}
@@ -55,7 +57,7 @@ export default function OverlayCard({ image, title, desc, tags, sizes, size = 'l
         </div>
       </div>
 
-      <OpenProjectButton project={{ title, image, desc, tags }} />
+      {modal && <OpenProjectButton project={{ title, image, desc, tags, ...modal }} />}
     </div>
   );
 }

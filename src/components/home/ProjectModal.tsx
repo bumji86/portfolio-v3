@@ -1,12 +1,11 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import Media from './Media';
 import { useModal } from './modal-context';
+import type { ProjectMedia } from '@/content/home';
 
-// A reference slot at the bottom of the modal: image, self-hosted video, or an embed (e.g. YouTube).
-export type ProjectMedia =
-  | { type: 'image'; src: string; alt?: string }
-  | { type: 'video'; src: string; poster?: string }
-  | { type: 'embed'; src: string; title?: string };
+
+export type { ProjectMedia };
 
 export type Project = {
   title: string;
@@ -14,7 +13,9 @@ export type Project = {
   desc?: string;
   tags: string[];
   body?: string[]; // paragraphs; lorem ipsum until real copy exists
-  media?: (ProjectMedia | null)[]; // null = placeholder
+  media?: (ProjectMedia | null)[]; // null = placeholder slot; [] = no reference row
+  builtWith?: string[]; // tools/stack chips under the tags
+  tools?: { name: string; desc: string; link?: string }[]; // sub-projects listed after the body
 };
 
 const LOREM = [
@@ -23,7 +24,8 @@ const LOREM = [
 ];
 
 export function ProjectBody({ project }: { project: Project }) {
-  const { title, image, desc, tags, body = LOREM, media = [null, null] } = project;
+  const { title, image, desc, tags, body = LOREM, media = [null, null], builtWith, tools } = project;
+  const t = useTranslations('home.works');
 
   return (
     <article className="px-6 pt-10 pb-14 md:px-12 md:pt-12 md:pb-24">
@@ -43,6 +45,16 @@ export function ProjectBody({ project }: { project: Project }) {
         ))}
       </ul>
 
+      {builtWith && builtWith.length > 0 && (
+        <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+          {builtWith.map((b) => (
+            <span key={b} className="rounded-full border border-neutral-300 px-3 py-1 text-neutral-700 dark:border-neutral-700 dark:text-neutral-300">
+              {b}
+            </span>
+          ))}
+        </div>
+      )}
+
       <hr className="mt-6 border-neutral-200 dark:border-neutral-800" />
 
       <div className="mt-6 space-y-6 text-[15px] leading-7 text-neutral-700 dark:text-neutral-300">
@@ -51,11 +63,39 @@ export function ProjectBody({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="mt-14 grid gap-4 sm:grid-cols-2">
-        {media.map((m, i) => (
-          <ReferenceMedia key={i} media={m} />
-        ))}
-      </div>
+      {tools && tools.length > 0 && (
+        <div className="mt-8 divide-y divide-neutral-200 border-t border-neutral-200 dark:divide-neutral-800 dark:border-neutral-800">
+          {tools.map((tool) => (
+            <section key={tool.name} className="py-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 className="text-lg font-semibold tracking-tight">{tool.name}</h3>
+                {tool.link && (
+                  <a
+                    href={tool.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-neutral-500 hover:text-neutral-900 hover:underline dark:text-neutral-400 dark:hover:text-white"
+                  >
+                    {t('visit')} ↗
+                  </a>
+                )}
+              </div>
+              <p className="mt-2 text-[15px] leading-7 text-neutral-700 dark:text-neutral-300">{tool.desc}</p>
+            </section>
+          ))}
+        </div>
+      )}
+
+      {media.length > 0 && (
+        <div className="mt-14 grid gap-4 sm:grid-cols-2">
+          {media.map((m, i) => (
+            // with an odd count the first item spans the full row (e.g. a lead video above two photos)
+            <div key={i} className={media.length % 2 === 1 && i === 0 ? 'sm:col-span-2' : ''}>
+              <ReferenceMedia media={m} />
+            </div>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

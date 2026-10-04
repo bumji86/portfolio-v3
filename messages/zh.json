@@ -384,37 +384,45 @@
         "cobranding": {
           "title": "联名合作项目",
           "tags": [
-            "风险管理"
+            "风险管理",
+            "合作伙伴",
+            "危机应对"
           ]
         },
         "groupDeal": {
           "title": "全新折扣模式",
           "tags": [
-            "跨部门沟通"
+            "跨部门沟通",
+            "产品",
+            "本地化"
           ]
         },
         "dataViz": {
           "title": "数据可视化",
           "tags": [
             "数据",
-            "洞察"
+            "洞察",
+            "仪表盘"
           ]
         },
         "offlineEvents": {
           "title": "线下活动",
           "tags": [
             "活动",
-            "品牌"
+            "品牌",
+            "全球"
           ]
         },
         "contentProduction": {
           "title": "内容制作",
           "tags": [
             "创意",
-            "媒体"
+            "媒体",
+            "AI"
           ]
         }
-      }
+      },
+      "visit": "访问网站"
     },
     "brands": {
       "title": "品牌合作"
@@ -445,22 +453,22 @@
       "contact": "联系我"
     },
     "contact": {
-        "title": "联系",
-        "desc": "欢迎通过下方表单或联系方式与我联系。",
-        "email": "邮箱",
-        "phone": "电话",
-        "kakao": "Kakao",
-        "wechat": "微信",
-        "name": "姓名",
-        "namePh": "您的姓名",
-        "emailPh": "your@email.com",
-        "subject": "主题",
-        "subjectPh": "项目咨询",
-        "message": "留言",
-        "messagePh": "请介绍一下您的项目...",
-        "send": "发送消息",
-        "notConnected": "表单尚未接通——请直接发送邮件至 {email}。"
-      },
+      "title": "联系",
+      "desc": "欢迎通过下方表单或联系方式与我联系。",
+      "email": "邮箱",
+      "phone": "电话",
+      "kakao": "Kakao",
+      "wechat": "微信",
+      "name": "姓名",
+      "namePh": "您的姓名",
+      "emailPh": "your@email.com",
+      "subject": "主题",
+      "subjectPh": "项目咨询",
+      "message": "留言",
+      "messagePh": "请介绍一下您的项目...",
+      "send": "发送消息",
+      "notConnected": "表单尚未接通——请直接发送邮件至 {email}。"
+    },
     "footer": {
       "kakao": "Kakao",
       "wechat": "微信",

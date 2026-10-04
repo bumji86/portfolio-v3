@@ -8,21 +8,75 @@ export const hero = {
   poster: null as string | null, // shown before load and under reduced motion, e.g. '/images/hero-poster.jpg'
 };
 
+// A reference slot at the bottom of a project modal: image, self-hosted video, or an embed
+// (YouTube via youtube-nocookie.com/embed/<id>, Google Drive via drive.google.com/file/d/<id>/preview).
+export type ProjectMedia =
+  | { type: 'image'; src: string; alt?: string }
+  | { type: 'video'; src: string; poster?: string }
+  | { type: 'embed'; src: string; title?: string };
+
 export const highlights: { id: 'aiLevelUp' | 'gmvGrowth' | 'promotions'; image: string | null }[] = [
   { id: 'aiLevelUp', image: '/images/highlights/ai-level-up.jpg' },
   { id: 'gmvGrowth', image: '/images/highlights/gmv-growth.png' },
   { id: 'promotions', image: '/images/highlights/promotions.jpg' },
 ];
 
+// Card image + modal media. Modal text (summary, body, tags) lives in messages/<locale>.json → home.works.items.
+// `cover` overrides the card image inside the modal; `media: []` hides the reference row.
 export const works: {
-  id: 'cobranding' | 'groupDeal' | 'dataViz' | 'offlineEvents' | 'contentProduction';
+  id: 'cobranding' | 'groupDeal' | 'dataViz' | 'offlineEvents' | 'contentProduction' | 'aiTools';
   image: string | null;
+  cover?: string;
+  cardFit?: 'contain'; // show the whole card image (e.g. a landscape image with text) instead of cropping
+  media: (ProjectMedia | null)[];
+  builtWith?: string[];
+  toolLinks?: (string | null)[]; // per entry of messages home.works.items.<id>.tools
 }[] = [
-  { id: 'cobranding', image: '/images/works/cobranding.jpg' },
-  { id: 'groupDeal', image: '/images/works/group-deal.jpg' },
-  { id: 'dataViz', image: '/images/works/data-viz.jpg' },
-  { id: 'offlineEvents', image: '/images/works/offline-events.jpg' },
-  { id: 'contentProduction', image: '/images/works/content-production.jpg' },
+  {
+    id: 'cobranding',
+    image: '/images/works/cobranding.jpg',
+    media: [{ type: 'embed', src: 'https://www.youtube-nocookie.com/embed/y6zZQB7EMDo', title: 'YouTube video' }, { type: 'embed', src: 'https://www.youtube-nocookie.com/embed/MJu-21h5x1E', title: 'YouTube video' }],
+  },
+  {
+    id: 'groupDeal',
+    image: '/images/works/group-deal.jpg',
+    cover: '/images/works/group-deal-cover.jpg',
+    media: [{ type: 'embed', src: 'https://www.youtube-nocookie.com/embed/CPhQUP153s0', title: 'YouTube video' }, { type: 'embed', src: 'https://www.youtube-nocookie.com/embed/PlPOnpJCQXg', title: 'YouTube video' }],
+  },
+  {
+    id: 'dataViz',
+    image: '/images/works/data-viz.jpg',
+    media: [],
+  },
+  {
+    id: 'offlineEvents',
+    image: '/images/works/offline-events.jpg',
+    media: [
+      { type: 'image', src: '/images/works/offline-events-ref-1.jpg', alt: 'Offline event' },
+      { type: 'image', src: '/images/works/offline-events-ref-2.jpg', alt: 'Offline event' },
+    ],
+  },
+  {
+    id: 'contentProduction',
+    image: '/images/works/content-production.jpg',
+    media: [{ type: 'embed', src: 'https://www.youtube-nocookie.com/embed/FAmeed16hEs', title: 'YouTube video' }, { type: 'embed', src: 'https://www.youtube-nocookie.com/embed/kxUfbUtl7u4', title: 'YouTube video' }],
+  },
+  {
+    // One card for all AI-built tools on purpose (keeps the portfolio reading as a marketer's, not a developer's)
+    id: 'aiTools',
+    image: '/images/works/ai-tools.jpg',
+    media: [
+      { type: 'image', src: '/images/works/ai-tools-ref-1.jpg', alt: 'YouTube Trend Radar dashboard' },
+      { type: 'image', src: '/images/works/ai-tools-ref-2.jpg', alt: 'Hotdeal Monitor dashboard' },
+    ],
+    builtWith: [
+      'Claude, Qoder (AI coding assistants)',
+      'Next.js, TypeScript, SQLite',
+      'Chrome extension with on-device OCR',
+      'Home server + Cloudflare Tunnel',
+    ],
+    toolLinks: [null, 'https://hotdeal.sumimasen.dev', 'https://radar.sumimasen.dev'],
+  },
 ];
 
 export const brands: { name: string; logo: string | null }[] = [
@@ -39,11 +93,3 @@ export const brands: { name: string; logo: string | null }[] = [
   { name: 'weverse', logo: '/images/brands/weverse.svg' },
   { name: 'YouTube', logo: '/images/brands/youtube.png' },
 ];
-
-export const contact = {
-  kakao: '18601064267',
-  phone: '+82 10 2965 9558',
-  email: 'lbj86@naver.com',
-  wechat: 'lifanjun001',
-  linkedin: 'https://www.linkedin.com/in/beomjun-lee-1854501b1',
-};
