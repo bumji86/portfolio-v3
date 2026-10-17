@@ -13,6 +13,10 @@ type Item = {
   groups?: { heading: string; bullets: string[] }[];
 };
 
+// Résumé-only project / AI tool entries (messages cv.projects.items, cv.aiTools). Locales without them
+// fall back to the home Works cards.
+type Entry = { title: string; meta?: string; url?: string; bullets: string[] };
+
 const MINOR = ['education', 'awards', 'activities', 'military'] as const;
 
 export default function ResumeDocument() {
@@ -22,7 +26,23 @@ export default function ResumeDocument() {
 
   const career = about.raw('sections.career.items') as Item[];
   const results = cv.raw('keyResults.items') as { value: string; label: string }[];
-  const skills = [...new Set([...(home.raw('tags.row1') as string[]), ...(home.raw('tags.row2') as string[])])];
+  // cv.other (optional) folds awards/activities/military into one "Awards & others" section.
+  const minor: { key: string; title: string; sub: string; items: Item[] }[] = cv.has('other.title')
+    ? [
+        { key: 'education', title: about('sections.education.title'), sub: about('sections.education.sub'), items: about.raw('sections.education.items') as Item[] },
+        {
+          key: 'other',
+          title: cv('other.title'),
+          sub: cv('other.sub'),
+          items: (['awards', 'activities', 'military'] as const).flatMap((id) => about.raw(`sections.${id}.items`) as Item[]),
+        },
+      ]
+    : MINOR.map((id) => ({ key: id, title: about(`sections.${id}.title`), sub: about(`sections.${id}.sub`), items: about.raw(`sections.${id}.items`) as Item[] }));
+  const projects = cv.has('projects.items') ? (cv.raw('projects.items') as Entry[]) : null;
+  const aiTools = cv.has('aiTools.items') ? (cv.raw('aiTools.items') as Entry[]) : null;
+  const skills = cv.has('skills.items')
+    ? (cv.raw('skills.items') as string[])
+    : [...new Set([...(home.raw('tags.row1') as string[]), ...(home.raw('tags.row2') as string[])])];
 
   return (
     <article className="mx-auto max-w-[820px] px-6 pt-12 pb-14 text-neutral-900 md:px-12 dark:text-neutral-100 print:max-w-none print:p-0 print:text-neutral-900">
@@ -48,7 +68,8 @@ export default function ResumeDocument() {
       <Section title={about('sections.career.title')} sub={about('sections.career.sub')}>
         <div className="space-y-7 print:space-y-4">
           {career.map((c) => (
-            <div key={c.org}>
+            // Keep single-group entries whole so the company header can't be stranded at a page end.
+            <div key={c.org} className={(c.groups?.length ?? 0) <= 1 ? 'break-inside-avoid' : ''}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                 <h3 className="text-lg font-semibold tracking-tight">{c.org}</h3>
                 <p className="text-[13px] text-neutral-500">{c.period}</p>
@@ -74,21 +95,31 @@ export default function ResumeDocument() {
       </Section>
 
       <Section title={cv('projects.title')} sub={cv('projects.sub')}>
-        <ul className="space-y-3 print:space-y-1.5">
-          {works.map(({ id }) => (
-            <li key={id} className="break-inside-avoid text-[13px] leading-6 print:text-[12px] print:leading-[1.55]">
-              <span className="font-semibold text-neutral-900 dark:text-neutral-100 print:text-neutral-900">{home(`works.items.${id}.title`)}</span>
-              <span className="text-neutral-400"> — </span>
-              <span className="text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{home(`works.items.${id}.summary`)}</span>
-            </li>
-          ))}
-        </ul>
+        {projects ? (
+          <Entries items={projects} />
+        ) : (
+          <ul className="space-y-3 print:space-y-1.5">
+            {works.map(({ id }) => (
+              <li key={id} className="break-inside-avoid text-[13px] leading-6 print:text-[12px] print:leading-[1.55]">
+                <span className="font-semibold text-neutral-900 dark:text-neutral-100 print:text-neutral-900">{home(`works.items.${id}.title`)}</span>
+                <span className="text-neutral-400"> — </span>
+                <span className="text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{home(`works.items.${id}.summary`)}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </Section>
 
-      {MINOR.map((id) => (
-        <Section key={id} title={about(`sections.${id}.title`)} sub={about(`sections.${id}.sub`)} keep>
+      {aiTools && (
+        <Section title={cv('aiTools.title')} sub={cv('aiTools.sub')}>
+          <Entries items={aiTools} />
+        </Section>
+      )}
+
+      {minor.map((m) => (
+        <Section key={m.key} title={m.title} sub={m.sub} keep>
           <ul className="space-y-3 print:space-y-1.5">
-            {(about.raw(`sections.${id}.items`) as Item[]).map((it) => (
+            {m.items.map((it) => (
               <li key={it.org} className="grid break-inside-avoid gap-x-6 text-[13px] leading-6 sm:grid-cols-[9rem_1fr] print:grid-cols-[9rem_1fr] print:text-[12px] print:leading-[1.55]">
                 <span className="text-neutral-500">{it.period}</span>
                 <span>
@@ -106,6 +137,33 @@ export default function ResumeDocument() {
         <p className="text-[13px] leading-6 text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{skills.join(' · ')}</p>
       </Section>
     </article>
+  );
+}
+
+function Entries({ items }: { items: Entry[] }) {
+  return (
+    <div className="space-y-3 text-[13px] leading-6 print:space-y-1.5 print:text-[12px] print:leading-[1.55]">
+      {items.map((e) => (
+        <div key={e.title} className="break-inside-avoid">
+          <p className="font-semibold text-neutral-900 dark:text-neutral-100 print:text-neutral-900">
+            {e.title}
+            {e.meta && <span className="font-normal text-neutral-500"> | {e.meta}</span>}
+            {e.url && (
+              <a href={e.url} className="ml-2 font-normal text-neutral-500 underline underline-offset-2">
+                {e.url.replace(/^https?:\/\//, '')}
+              </a>
+            )}
+          </p>
+          <ul className="text-neutral-600 dark:text-neutral-400 print:text-neutral-600">
+            {e.bullets.map((b) => (
+              <li key={b} className="pl-3 -indent-3">
+                - {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }
 
