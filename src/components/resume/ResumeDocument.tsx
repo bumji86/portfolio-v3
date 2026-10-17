@@ -70,11 +70,11 @@ export default function ResumeDocument() {
           {career.map((c) => (
             // Keep single-group entries whole so the company header can't be stranded at a page end.
             <div key={c.org} className={(c.groups?.length ?? 0) <= 1 ? 'break-inside-avoid' : ''}>
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 break-after-avoid">
                 <h3 className="text-lg font-semibold tracking-tight">{c.org}</h3>
                 <p className="text-[13px] text-neutral-500">{c.period}</p>
               </div>
-              <p className="mt-0.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{c.role}</p>
+              <p className="mt-0.5 break-after-avoid text-sm font-medium text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{c.role}</p>
               <div className="mt-2.5 space-y-3 text-[13px] leading-6 print:mt-1.5 print:space-y-1.5 print:text-[12px] print:leading-[1.55] text-neutral-600 dark:text-neutral-400 print:text-neutral-600">
                 {c.groups?.map((g) => (
                   <div key={g.heading} className="break-inside-avoid">

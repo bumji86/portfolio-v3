@@ -283,8 +283,8 @@
           ]
         },
         "gmvGrowth": {
-          "title": "211% YoY Growth",
-          "desc": "+211% YoY GMV growth via influencer marketing",
+          "title": "111% YoY Growth",
+          "desc": "+111% YoY influencer marketing GMV — 2.11× the previous year",
           "tags": [
             "Growth",
             "Influencer Marketing"
@@ -464,7 +464,7 @@
       "title": "About.",
       "tagline": "Influencer · Commerce · Data",
       "name": "LEE BEOMJUN",
-      "intro": "A marketer spanning influencer marketing and commerce promotions, leading end-to-end from planning large-scale promotions to execution and feature improvements. I build predictable performance structures through data-driven decisions.",
+      "intro": "Marketing manager with a background in content and creator partnerships, translating audience insights into commerce results. Experienced in planning, executing, and measuring domestic and cross-border group-buying campaigns, including major promotions involving over 100 influencers. My work spans campaign management, product feature launches, performance dashboards, and AI-assisted tool development—improving both marketing outcomes and the workflows behind them.",
       "label": "PROFILE / RÉSUMÉ DRAFT"
     },
     "sections": {
@@ -482,29 +482,29 @@
             "role": "Marketing Manager · Current",
             "groups": [
               {
-                "heading": "Influencer Marketing & Commerce Promotions",
+                "heading": "Influencer Marketing & Commerce Campaigns",
                 "bullets": [
-                  "Planned and ran influencer-driven group-buying promotions across cross-border and domestic markets",
-                  "Reached ~US$5.5M in annual cross-border GMV, onboarded 4 new key channels, and hit a 10% best-seller rate",
-                  "Ran domestic promotions end-to-end — 900+ campaigns contributing ~US$11.7M in direct and indirect results",
-                  "Discovered and grew new influencers through data-driven product selection and channel matching",
-                  "PM for two S-tier promotions a year (100+ influencers each) and monthly A+ tier campaigns"
+                  "Plan, execute, and measure influencer-led group-buying campaigns across domestic and cross-border markets.",
+                  "Generated approximately US$5.5M in annual GMV from directly managed cross-border promotions.",
+                  "Identified and onboarded four key influencer channels, supporting their growth through data-informed product selection and creator–product matching.",
+                  "Lead two major promotional events annually, each involving over 100 influencers, alongside recurring monthly campaigns."
                 ]
               },
               {
-                "heading": "Domestic Promotion Planning & Operations",
+                "heading": "Domestic Group-Buying Operations & Service Improvements",
                 "bullets": [
-                  "Contributed to planning and launching the “Group Deal” feature",
-                  "Owned local group-buying promotions for two years — planning, operations, and performance management",
-                  "Built and streamlined promotion workflows with partner teams"
+                  "Personally configured and launched over 900 domestic product promotions in 2025, supporting projects that generated US$11.7M in total GMV.",
+                  "Led planning, execution, and performance management for domestic group-buying promotions over a two-year period.",
+                  "Contributed to the planning and launch of the in-app “Group Deal” feature, coordinating work between Hangzhou headquarters and the Seoul office.",
+                  "Established and improved promotion workflows in collaboration with cross-functional teams."
                 ]
               },
               {
-                "heading": "Data Analysis & Performance Management",
+                "heading": "Data Analytics & Workflow Tools",
                 "bullets": [
-                  "Built a process to consolidate and clean influencer campaign data",
-                  "Designed and built a KPI-based performance dashboard",
-                  "Supported decisions and improved efficiency by visualizing campaign performance and trends"
+                  "Built processes for consolidating and cleaning influencer campaign data, along with dashboards for tracking key performance metrics.",
+                  "Consolidated group-buying results and campaign trends to reduce repetitive data gathering for reporting and performance reviews.",
+                  "Built three AI-assisted tools for content trend analysis, deal monitoring, and internal expense reimbursement."
                 ]
               }
             ]
@@ -512,27 +512,24 @@
           {
             "period": "2020.02 – 2023.12",
             "org": "Semicolon Studio (SNOW)",
-            "role": "Marketing Manager · PD",
+            "role": "Marketing Manager & Producer",
             "groups": [
               {
                 "heading": "Influencer Marketing",
                 "bullets": [
-                  "Planned and ran 5+ drama/film promotion campaigns a month on average",
-                  "Drove 36.5M cumulative views across digital campaigns"
+                  "Planned and executed an average of five or more influencer campaigns per month for film and television releases, generating 36.5M cumulative views."
                 ]
               },
               {
                 "heading": "Content Planning & Production (YouTube)",
                 "bullets": [
-                  "Joined <PIXID> as an early member, leading content strategy and production",
-                  "Early content reached 25M cumulative views"
+                  "Led content strategy and production as an early member of the PIXID YouTube channel, with early content reaching 25M cumulative views."
                 ]
               },
               {
                 "heading": "Commercial Film Production",
                 "bullets": [
-                  "Worked on the film <Dr. Cheon and the Lost Talisman>",
-                  "Contributed to script review and post-production (1.91M admissions)"
+                  "Contributed to script review and post-production for the feature film Dr. Cheon and the Lost Talisman."
                 ]
               }
             ]
@@ -540,13 +537,13 @@
           {
             "period": "2018.12 – 2020.01",
             "org": "CJ ENM DIA TV",
-            "role": "Influencer Manager · Freelance",
+            "role": "Freelance Influencer Manager",
             "groups": [
               {
-                "heading": "Recruited and managed Greater China influencers",
+                "heading": "Recruited and managed influencers in Greater China",
                 "bullets": [
-                  "Ran YouTube channels and planned/produced original content",
-                  "Supported remote collaboration between Korean and Chinese creators"
+                  "Managed YouTube channels and planned and produced original content.",
+                  "Supported remote collaboration between creators in Korea and China."
                 ]
               }
             ]
@@ -564,7 +561,7 @@
           {
             "period": "2010.09 – 2016.07",
             "org": "Tsinghua University (清华大学)",
-            "role": "Journalism and Communication · Bachelor's degree"
+            "role": "Bachelor’s Degree in Journalism and Communication"
           }
         ]
       },
@@ -578,9 +575,9 @@
         "items": [
           {
             "period": "2015.12",
-            "org": "National Security 111-Second Film Festival",
-            "role": "National Intelligence Service · Gold Prize",
-            "desc": "Entered the 1st National Security 111-Second Film Festival and handled overall video production in a two-person team."
+            "org": "1st National Security 111-Second Video Contest",
+            "role": "National Intelligence Service · Gold Award",
+            "desc": "Worked as part of a two-person team responsible for the full video production process."
           }
         ]
       },
@@ -611,8 +608,8 @@
         "items": [
           {
             "period": "2013.10 – 2015.07",
-            "org": "Republic of Korea Army · Active duty",
-            "role": "Honorably discharged"
+            "org": "Republic of Korea Army",
+            "role": "Completed Active-Duty Service"
           }
         ]
       }
@@ -627,26 +624,99 @@
       "sub": "",
       "items": [
         {
-          "value": "+211%",
-          "label": "YoY GMV growth driven by influencer marketing"
+          "value": "+111%",
+          "label": "Year-over-year growth in influencer marketing GMV — 2.11× the previous year"
         },
         {
           "value": "900+",
-          "label": "Domestic campaigns run end-to-end, contributing ~US$11.7M in direct and indirect results"
+          "label": "Domestic promotions configured and launched in 2025 — US$11.7M in total GMV across projects I supported operationally"
         },
         {
           "value": "US$5.5M",
-          "label": "Annual cross-border GMV, with 4 new key channels and a 10% best-seller rate"
+          "label": "Approximate annual GMV from cross-border promotions I directly managed"
         }
       ]
     },
     "projects": {
       "title": "Selected Projects",
+      "sub": "",
+      "items": [
+        {
+          "title": "Three-Brand Collaboration",
+          "meta": "US$1.2M+ GMV",
+          "bullets": [
+            "Led a collaboration among three brands, generating over US$1.2M in GMV."
+          ]
+        },
+        {
+          "title": "Influencer Campaign Incident Response",
+          "meta": "Resolved Within 18 Hours",
+          "bullets": [
+            "When all orders from an influencer deal campaign were canceled, informed the influencer and relevant stakeholders and proposed a recovery plan enabling customers to repurchase with an additional discount.",
+            "Coordinated corrective action with headquarters and Korea-based teams, resolving the issue within 18 hours of occurrence."
+          ]
+        },
+        {
+          "title": "Group Deal Feature Launch",
+          "bullets": [
+            "Contributed to the planning and development of a new in-app promotional format.",
+            "Coordinated communication and collaboration between Hangzhou headquarters and the Seoul office."
+          ]
+        },
+        {
+          "title": "Group-Buying Performance Dashboard",
+          "bullets": [
+            "Built a dashboard consolidating the team’s group-buying results and campaign trends.",
+            "Reduced repetitive data gathering for reporting and performance reviews."
+          ]
+        }
+      ]
+    },
+    "aiTools": {
+      "title": "Tools Built with AI",
+      "sub": "",
+      "items": [
+        {
+          "title": "YouTube Content Trend Monitor",
+          "url": "https://radar.sumimasen.dev",
+          "bullets": [
+            "Built an app that tracks how quickly individual videos gain views across selected YouTube channels, making it easier to identify emerging topics within a category."
+          ]
+        },
+        {
+          "title": "Deal Monitor",
+          "url": "https://hotdeal.sumimasen.dev",
+          "bullets": [
+            "Built a tool to monitor products promoted as deals across online communities and track where deals from our platform are being featured.",
+            "Added historical lowest-price tracking to support price comparisons and promotion planning."
+          ]
+        },
+        {
+          "title": "Internal Expense Reimbursement Assistant",
+          "bullets": [
+            "Built an internal browser extension that identifies expense categories from uploaded receipt images and assists with reimbursement form entry.",
+            "Partially automated repetitive data entry in the expense reimbursement workflow."
+          ]
+        }
+      ]
+    },
+    "other": {
+      "title": "Awards & Additional Experience",
       "sub": ""
     },
     "skills": {
-      "title": "Skills",
-      "sub": ""
+      "title": "Core Skills",
+      "sub": "",
+      "items": [
+        "Influencer Recruitment & Development",
+        "Group Buying & Commerce Promotions",
+        "Large-Scale Campaign Management",
+        "Korea–China Cross-Functional Collaboration",
+        "Campaign Incident Management",
+        "Data Analytics & Dashboard Development",
+        "Content Strategy & Production",
+        "AI-Assisted Tool Development"
+      ]
     }
   }
 }
